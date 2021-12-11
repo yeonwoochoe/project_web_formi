@@ -38,13 +38,108 @@
   height: auto;
 }
 #headBox {
-  position: relative;
-  display: flex;
-  justify-content: space-between;
   width: 100%;
   height: 60px;
+  margin: auto;
   box-sizing: content-box;
   background-color: #fff;
+}
+h1 {
+  width: 120px;
+  height: 40px;
+  margin: auto;
+  background-color: #fdf;
+}
+@media all and (max-width: 767px) {
+  h1 {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 8px;
+    margin: auto;
+  }
+}
+h1 > a {
+  display: block;
+  width: 100%;
+  height: 100%;
+  background-image: url(../../img/logo.png);
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  background-size: contain;
+}
+h1 > a > span {
+  display: block;
+  position: absolute;
+  z-index: -1;
+  clip: rect(0 0 0 0);
+  width: 0;
+  height: 0;
+  overflow: hidden;
+}
+@media all and (max-width: 767px) {
+  h1 > a {
+    background-image: url(../../img/logo.png);
+  }
+}
+
+#headBox .navigation .btnBox {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+}
+@media all and (max-width: 767px) {
+  #headBox .navigation .btnBox .mid_navi_btn {
+    display: block;
+    width: 40px;
+    height: 40px;
+    background-color: #fdf;
+  }
+  #headBox .navigation .btnBox .mid_navi_btn button {
+    display: block;
+    width: 100%;
+    height: 100%;
+    background-image: url(../../img/m_navigation.svg);
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    background-size: contain;
+  }
+  #headBox .navigation .btnBox .mid_navi_btn button > span {
+    display: block;
+    position: absolute;
+    z-index: -1;
+    clip: rect(0 0 0 0);
+    width: 0;
+    height: 0;
+    overflow: hidden;
+  }
+}
+@media all and (max-width: 767px) {
+  #headBox .navigation .btnBox .search_area {
+    display: block;
+    width: 40px;
+    height: 40px;
+    background-color: #fdf;
+    margin-left: 10px;
+  }
+  #headBox .navigation .btnBox .search_area button {
+    display: block;
+    width: 100%;
+    height: 100%;
+    background-image: url(../../img/m_navigation.svg);
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    background-size: contain;
+  }
+  #headBox .navigation .btnBox .search_area button > span {
+    display: block;
+    position: absolute;
+    z-index: -1;
+    clip: rect(0 0 0 0);
+    width: 0;
+    height: 0;
+    overflow: hidden;
+  }
 }
 .midheader_wrap {
   width: 100%;
@@ -65,24 +160,13 @@
     height: 100%;
   }
 }
-@media all and (max-width: 767px) {
-  #mid_header .mid_navi_btn {
-    width: 40px;
-    height: 40px;
-    background-color: #fdf;
-    background-image: url(../../img/m_navigation.svg);
-    background-repeat: no-repeat;
-    background-position: 50% 50%;
-    background-size: contain;
-  }
-}
 @media all and (min-width: 1200px) and (max-width: 1439px) {
-  #mid_header .mid_navi_btn {
+  #mid_header {
     display: none;
   }
 }
 @media all and (min-width: 1440px) {
-  #mid_header .mid_navi_btn {
+  #mid_header {
     display: none;
   }
 }
@@ -97,6 +181,7 @@
 }
 @media all and (max-width: 767px) {
   .mid_navigation {
+    display: none;
     position: absolute;
     top: 100%;
     left: 0;
@@ -135,44 +220,6 @@
   margin-right: 16px;
   color: #333333;
   font-weight: 600;
-}
-
-h1 {
-  width: 120px;
-  height: 40px;
-  background-color: #fdf;
-}
-@media all and (max-width: 767px) {
-  h1 {
-    position: absolute;
-    left: 0;
-    right: 0;
-    top: 8px;
-    margin: auto;
-  }
-}
-h1 > a {
-  display: block;
-  width: 100%;
-  height: 100%;
-  background-image: url(../../img/logo.png);
-  background-repeat: no-repeat;
-  background-position: 50% 50%;
-  background-size: contain;
-}
-h1 > a > span {
-  display: block;
-  position: absolute;
-  z-index: -1;
-  clip: rect(0 0 0 0);
-  width: 0;
-  height: 0;
-  overflow: hidden;
-}
-@media all and (max-width: 767px) {
-  h1 > a {
-    background-image: url(../../img/logo.png);
-  }
 }
 
 /*# sourceMappingURL=main.css.map */

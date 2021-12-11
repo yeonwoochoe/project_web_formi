@@ -5,13 +5,53 @@ $imgPath:'../../img/';
 
 .head_wrapper {
   position: fixed; top: 0; left: 0; z-index:1000;
-  width: 100%; height: auto;
+  width: 100%; height: auto; 
 
 @at-root #headBox {
-  position: relative; display: flex; justify-content: space-between;
-  width: 100%; height: 60px; box-sizing: content-box;
+  width: 100%; height: 60px; margin: auto; box-sizing: content-box;
   background-color: $color_white;
+  @at-root h1 {
+    width: 120px; height: 40px;
+    margin: auto;
+    background-color: #fdf;
+    @include mobile{
+      position:absolute; left:0; right:0; top:8px; margin:auto;}
+    
+    
+    & > a {    
+    @include full('logo.png',$size:contain){
+      @include mobile{ background-image: url(#{$imgPath}+'logo.png'); }
+        };
+      } //& > a
+    }// h1
+  .navigation{
+    .btnBox {
+      display: flex;
+      justify-content: space-between;
+      padding: 10px;
+      .mid_navi_btn {
+        @include mobile{
+          display: block;
+          width: 40px; height: 40px; background-color: #fdf;
 
+          
+          button {
+            @include full ($file:'m_navigation.svg',$size:contain)
+          }
+        }
+      }
+      .search_area {
+        @include mobile{
+          display: block;
+          width: 40px; height: 40px; background-color: #fdf;
+          margin-left: 10px;
+          
+          button {
+            @include full ($file:'m_navigation.svg',$size:contain)
+          }
+        }
+      }
+    }
 @at-root .midheader_wrap {
     width: 100%; height: 100%; padding: 8px;
     margin: auto;
@@ -23,15 +63,9 @@ $imgPath:'../../img/';
   
     @include mobile { width: 100%; height: 100%; }
 
-  .mid_navi_btn {
-      @include mobile{
-        width: 40px; height: 40px; background-color: #fdf;
-        background: {
-        image: url(#{$imgPath} +'m_navigation.svg');
-        repeat: no-repeat;
-        position:50% 50%;
-        size: contain;} 
-      }
+  
+
+
       @include laptop {display: none;}
       @include pc {display: none;}
 
@@ -40,8 +74,8 @@ $imgPath:'../../img/';
 
 
   @at-root .mid_navigation  {
-
     @include mobile{
+      display: none;
       position: absolute; top:100%; left:0; width: 100%; 
       flex-direction:column;
       background-color: $color_white;  
@@ -76,19 +110,7 @@ $imgPath:'../../img/';
 
 
 
-    @at-root h1 {
-      width: 120px; height: 40px;
-      background-color: #fdf;
-      @include mobile{
-        position:absolute; left:0; right:0; top:8px; margin:auto;}
-      
-      
-      & > a {    
-      @include full('logo.png',$size:contain){
-        @include mobile{ background-image: url(#{$imgPath}+'logo.png'); }
-          };
-        } //& > a
-      }// h1
+   
 
 
       
