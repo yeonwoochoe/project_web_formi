@@ -91,13 +91,20 @@ $pc:1440px;
   }
 }
 
+
+@mixin desk(){
+  @media all and (max-width:#{$pc - 1}) {
+    @content; 
+  }
+}
+
+
+
 @mixin laptop(){
   @media all and (min-width:$laptop) and (max-width:#{$pc - 1}) {
     @content;
   }
 }
-
-
 
 
 

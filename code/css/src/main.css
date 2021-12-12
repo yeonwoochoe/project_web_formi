@@ -56,11 +56,15 @@
     padding-top: 50px;
   }
 }
+@media all and (min-width: 1440px) {
+  #headBox {
+    padding-top: 50px;
+  }
+}
 h1 {
-  width: 120px;
-  height: 40px;
-  margin: auto;
-  background-color: #fdf;
+  float: left;
+  width: 180px;
+  height: 64px;
 }
 @media all and (max-width: 1199px) {
   h1 {
@@ -91,31 +95,42 @@ h1 > a > span {
   height: 0;
   overflow: hidden;
 }
-@media all and (max-width: 767px) {
+@media all and (max-width: 1199px) {
   h1 > a {
     background-image: url(../../img/logo.png);
   }
 }
 
 .mid_navi_btnBox {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 10px;
+  display: none;
 }
-@media all and (max-width: 767px) {
+@media all and (max-width: 1199px) {
   .mid_navi_btnBox {
     width: 100%;
     height: 60px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+  }
+}
+.mid_navi_btnBox .mid_navi_btn {
+  display: block;
+  width: 36px;
+  height: 36px;
+  background-color: #fdf;
+}
+@media all and (min-width: 1200px) and (max-width: 1439px) {
+  .mid_navi_btnBox .mid_navi_btn {
+    display: none;
+  }
+}
+@media all and (min-width: 1440px) {
+  .mid_navi_btnBox .mid_navi_btn {
+    display: none;
   }
 }
 @media all and (max-width: 1199px) {
-  .mid_navi_btnBox .mid_navi_btn {
-    display: block;
-    width: 36px;
-    height: 36px;
-    background-color: #fdf;
-  }
   .mid_navi_btnBox .mid_navi_btn button {
     display: block;
     width: 100%;
@@ -199,9 +214,12 @@ h1 > a > span {
   margin: auto;
 }
 #mid_header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
   width: 100%;
   height: 100px;
-  padding: 20px 40px 20px 60px;
+  padding: 20px 40px 20px 70px;
   box-sizing: border-box;
   background-color: rgba(255, 255, 255, 0.9);
 }
@@ -215,41 +233,48 @@ h1 > a > span {
   }
 }
 
-.midheader_wrap .search_form_box {
-  float: right;
-  width: 300px;
-  height: 40px;
-  margin-top: 15px;
-  padding: 5px 8px;
-  border: 1px solid #ddd;
-  border-radius: 5px;
-  background-color: #fff;
+.mid_navigation {
+  width: auto;
+  height: 30px;
+  margin: 0;
 }
 @media all and (max-width: 1199px) {
-  .midheader_wrap .search_form_box {
-    display: none;
+  .mid_navigation {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    height: auto;
+    background-color: #fdf;
   }
 }
-
-.mid_navigation {
-  display: flex;
-  justify-content: space-between;
-  width: 100%;
-  height: auto;
-  min-height: 500px;
-  background-color: #fdf;
-}
-.mid_navigation.gnb {
-  display: flex;
+.mid_navigation .gnb {
   width: auto;
-  height: auto;
+  height: 100%;
 }
-.mid_navigation.gnb > li {
-  position: relative;
+@media all and (max-width: 1199px) {
+  .mid_navigation .gnb {
+    display: flex;
+    width: auto;
+    height: auto;
+  }
+}
+.mid_navigation .gnb > li {
+  float: left;
   width: auto;
-  margin-right: 16px;
-  color: #333333;
-  font-weight: 600;
+  height: 100%;
+  margin-left: 30px;
+  box-sizing: border-box;
+  color: #444;
+  text-align: center;
+}
+@media all and (max-width: 1199px) {
+  .mid_navigation .gnb > li {
+    position: relative;
+    width: auto;
+    margin-right: 16px;
+    color: #333333;
+    font-weight: 600;
+  }
 }
 @media all and (max-width: 1199px) {
   .mid_navigation {
@@ -264,14 +289,17 @@ h1 > a > span {
   .mid_navigation .gnb {
     flex-direction: column;
     height: auto;
-    background-color: #dfd;
+    background-color: #fff;
   }
   .mid_navigation .gnb > li {
     width: 100%;
     height: auto;
     min-height: 40px;
-    margin-right: 0;
-    padding: 8px;
+    margin-left: 0;
+    padding: 15px;
+    text-align: left;
+    line-height: 40px;
+    border-bottom: 1px solid #F2F2F2;
   }
   .mid_navigation .gnb > li > a {
     width: 100%;
@@ -280,6 +308,49 @@ h1 > a > span {
     font-size: 16px;
     font-weight: 700;
   }
+}
+
+.search_form_box {
+  float: right;
+  width: 300px;
+  height: 40px;
+  margin-top: 15px;
+  padding: 5px 8px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  background-color: #fff;
+}
+@media all and (max-width: 1199px) {
+  .search_form_box {
+    display: none;
+  }
+}
+.sch_inner_wrap {
+  display: inline-block;
+  height: 20px;
+  margin: 0;
+  width: 200px;
+  height: 100%;
+}
+.sch_inner_wrap > input {
+  width: 240px;
+  height: 30px;
+  background-color: transparent;
+}
+
+fieldset {
+  width: 100%;
+  height: 100%;
+}
+
+.sch_inner_btn_wrap {
+  float: right;
+  width: 28px;
+  height: 28px;
+  background-image: url(../../img/Search_icon.png);
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  background-size: initial;
 }
 
 #top_navigation {
@@ -297,6 +368,53 @@ h1 > a > span {
   #top_navigation {
     display: none;
   }
+}
+.top_nav_wrap {
+  position: relative;
+  margin: 0 auto;
+  width: 100%;
+  height: auto;
+}
+
+.support_unb {
+  float: left;
+  width: 430px;
+  height: 30px;
+}
+
+.support_area {
+  width: 100%;
+  height: 100%;
+}
+.support_area li {
+  float: left;
+  width: auto;
+  height: 100%;
+  margin-right: 20px;
+  box-sizing: border-box;
+  text-align: center;
+  text-transform: uppercase;
+  line-height: 30px;
+}
+
+.user_nav {
+  float: right;
+  width: 310px;
+  height: 30px;
+}
+
+.user_area {
+  width: 100%;
+  height: 100%;
+}
+.user_area li {
+  width: auto;
+  height: 100%;
+  line-height: 30px;
+  float: left;
+  margin-left: 20px;
+  box-sizing: border-box;
+  text-align: center;
 }
 
 /*# sourceMappingURL=main.css.map */

@@ -16,20 +16,18 @@ $imgPath:'../../img/';
   { width: 100%; height: 60px; margin: auto; 
     background-color: $color_white; }
   @include laptop { padding-top: 50px;}
+  @include pc { padding-top: 50px;}
 
 
   @at-root h1 {
-    width: 120px; height: 40px;
-    margin: auto; 
-    background-color: #fdf;
-     
+    float: left;  width: 180px; height: 64px; 
     @include handhelds{
       width: 100px; height: 40px; 
       position:absolute; left:0; right:0; top:10px; margin:auto;}
-    
-    & > a {    
+
+    & > a { 
     @include full('logo.png',$size:contain){
-      @include mobile{ background-image: url(#{$imgPath}+'logo.png'); }
+      @include handhelds{ background-image: url(#{$imgPath}+'logo.png'); }
         };
       } //& > a
     }// h1
@@ -38,14 +36,16 @@ $imgPath:'../../img/';
 
   @at-root .navigation{
     @at-root .mid_navi_btnBox {
-      display: flex; justify-content: space-between; align-items: center; padding: 10px;
-        @include mobile {width: 100%; height: 60px;}
-
+        display: none;
+        @include handhelds {width: 100%; height: 60px;
+          display: flex; justify-content: space-between; align-items: center; padding: 10px;}
 
       .mid_navi_btn {
+        display: block;
+        width: 36px; height: 36px; background-color: #fdf;
+        @include laptop {display: none;}
+        @include pc {display: none;}
         @include handhelds{
-          display: block;
-          width: 36px; height: 36px; background-color: #fdf;
             button {
                 @include full ($file:'m_navigation.svg',$size:contain)
           }
@@ -83,49 +83,79 @@ $imgPath:'../../img/';
     margin: auto;
 
 @at-root #mid_header{
-  width: 100%;
-  height: 100px;
-  padding: 20px 40px 20px 60px;
+  display: flex; justify-content: space-between; align-items: flex-end;
+  width: 100%; height: 100px;
+  padding: 20px 40px 20px 70px;
   box-sizing: border-box;
   background-color: rgba(255, 255, 255, 0.9);
       @include handhelds {    width: 100%; height: 100%; padding: 0;
         box-sizing: border-box;
         background-color: rgba($color_white,0.9);}
 
-    }//#mid_header
-
-  .search_form_box {
-    float: right;  width: 300px; height: 40px;
-    margin-top: 15px; padding: 5px 8px; border: 1px solid #ddd;
-    border-radius: 5px; background-color: $color_white;
-    @include handhelds {display: none;}
-  }
-}//.midheader_wrap
-
+    }//#mid_header '
+  
 
   @at-root .mid_navigation  {
-    display: flex; justify-content: space-between;
-    width: 100%; height: auto; min-height: 500px; background-color: #fdf;
-      &.gnb {display: flex; width: auto; height: auto;
-        & > li {position: relative;
-          width:auto; margin-right:16px; color:nth($color_black, 1);; font-weight:600;}
+    width: auto; height: 30px; margin: 0;
+      @include handhelds {
+        display: flex; justify-content: space-between;
+        width: 100%; height: auto;  background-color: #fdf;}
+
+      & .gnb {  width: auto; height: 100%; 
+        @include handhelds { display: flex; width: auto; height: auto;}
+        & > li {  float: left; width: auto; height: 100%; margin-left: 30px;
+          box-sizing: border-box; color: #444; text-align: center;
+          @include handhelds{position: relative;
+            width:auto; margin-right:16px; color:nth($color_black, 1);; font-weight:600;}
+        } //li
       }//.gnb 
 
     @include handhelds{
-      display: none;
-      position: absolute; top:100%; left:0; width: 100%; 
-      flex-direction:column;
-      background-color: $color_white;  
+      display: none; position: absolute; top:100%; left:0; width: 100%; 
+      flex-direction:column; background-color: $color_white;  
 
-    .gnb {flex-direction: column; height:auto; background-color: #dfd;
-      & > li {width:100%; height:auto; min-height:40px; margin-right: 0; padding:8px;
+    .gnb {flex-direction: column; height:auto; background-color: $color_white;
+      & > li {width:100%; height:auto; min-height:40px; margin-left: 0; 
+        padding:15px;text-align: left; line-height: 40px; 
+        border-bottom: 1px solid nth($color_gray, 1);
         & > a {width:100%; min-height:40px; color: nth($color_black, 1); font-size: map-get($font_size, content3);
-        font-weight: 700;}
+        font-weight: 700; }
       }   
     }
   }                    
 
     }//mid_navigation 
+
+    @at-root .search_form_box {
+      float: right;  width: 300px; height: 40px;
+      margin-top: 15px; padding: 5px 8px; border: 1px solid #ddd;
+      border-radius: 5px; background-color: $color_white;
+      @include handhelds {display: none;}
+  
+
+      @at-root .sch_inner_wrap {   display: inline-block;
+        height: 20px; margin: 0; width: 200px;height: 100%;
+        & > input {width: 240px; height: 30px;
+        background-color: transparent;}
+      }
+      @at-root fieldset {width: 100%; height: 100%;}
+      @at-root .sch_inner_btn_wrap  {  float: right;
+        width: 28px; height: 28px;
+        background-image: url(../../img/Search_icon.png);
+        background-repeat: no-repeat;
+        background-position: 50% 50%;
+        background-size: initial; }
+
+    
+    }//.search_form_box 
+
+
+
+
+  }//.midheader_wrap
+  
+
+
 
   @at-root #top_navigation {
     position: absolute; top: 0;  left: 0;
@@ -134,12 +164,39 @@ $imgPath:'../../img/';
     background-color: rgb(226, 226, 226);
     @include handhelds {display: none;}
 
-  }
+    @at-root .top_nav_wrap{
+      position: relative; margin: 0 auto;
+      width: 100%; height: auto;}
+    
+      @at-root .support_unb {  float: left;
+        width: 430px;
+        height: 30px;}
+      @at-root .support_area {  width: 100%; height: 100%;
+        & li {  float: left; width: auto; height: 100%;
+          margin-right: 20px; box-sizing: border-box;
+          text-align: center;  text-transform: uppercase;
+          line-height: 30px;}
+      }
+
+      @at-root .user_nav  {   float: right;
+        width: 310px; height: 30px;}
+
+      @at-root .user_area  {  width: 100%; height: 100%;
+        & li {  width: auto;
+          height: 100%;
+          line-height: 30px;
+          float: left;
+          margin-left: 20px;
+          box-sizing: border-box;
+          text-align: center;}
+      
+      }
+  }//#top_navigation
 
 
 
 
 
-    } //.midheader_wrap
+    } //.navigation
   } //#headBox
 }//.head_wrapper 
