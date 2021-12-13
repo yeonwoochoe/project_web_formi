@@ -7,6 +7,7 @@ $imgPath:'../../img/';
   position: fixed; top: 0; left: 0;
   width: 100%; //border-bottom: 1px solid #ddd;
   z-index: 1000;
+  
 
 @at-root #headBox {
   position: relative; width: 100%; height: 100px;
@@ -14,7 +15,7 @@ $imgPath:'../../img/';
 
   @include handhelds 
   { width: 100%; height: 60px; margin: auto; 
-    background-color: $color_white; }
+    background-color: $color_white; box-sizing: content-box; }
   @include laptop { padding-top: 50px;}
   @include pc { padding-top: 50px;}
 
@@ -35,9 +36,10 @@ $imgPath:'../../img/';
 
 
   @at-root .navigation{
+    
     @at-root .mid_navi_btnBox {
         display: none;
-        @include handhelds {width: 100%; height: 60px;
+        @include handhelds {width: 100%; height: 60px; 
           display: flex; justify-content: space-between; align-items: center; padding: 10px;}
 
       .mid_navi_btn {

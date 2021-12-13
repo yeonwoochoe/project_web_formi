@@ -1,0 +1,79 @@
+//#serchPdBox 
+
+$imgPath:'../../img/';
+
+
+#serchPdBox {
+    width: 100%; min-height: 400px; background-color: #fdf;
+
+@at-root .serch_pd_wrap {
+    position: relative; top: -100px; z-index: 1000;
+    width: 1074px; height: 450px; padding: 30px 90px;
+    margin: auto; background-color: #fff;
+    box-shadow: 5px 5px 20px rgba(94, 94, 94, 0.15);
+    @include handhelds {position: static;
+    width: 100%; height: 500px; padding:50px 20px;  margin: 0;
+  background-color: #fff;}
+}
+
+@at-root .search_title {
+  width: 100%; height: auto; margin: 40px auto;
+  & h2 {font-size: map-get($font_size, title3);
+  text-align: center; color:nth($color_black, 2);} 
+  @include handhelds {display: none;}
+}
+
+@at-root .search_mo_title{
+  width: 100%; height: auto; margin: 0 auto;
+  text-align: center; color:nth($color_black, 2);
+  & h2 {font-size: map-get($font_size, point1);
+  margin-bottom: 8px;}
+  & h3 {font-size: map-get($font_size,button1);
+  font-weight: 400;}
+  @include pc  {display: none;}
+  @include laptop  {display: none;}
+}
+
+
+@at-root .search_pd_icon {
+  display: inline-block; width: 50px; height: 50px;
+  background-image: url(../../img/search.svg);
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  transform: translateY(11px);
+}
+
+@at-root .serch_con_wrap { 
+  width: 100%; height: auto;
+  display: flex; justify-content: space-between;
+  @include handhelds { justify-content: space-around;
+  overflow-y: hidden; } 
+
+  @at-root .serch_conbox {
+    width: 180px; height: 148px;padding: 0;
+    background-color: #fff;
+    @include handhelds {width: 120px; }
+  }
+
+  @at-root .serch_thumbnail {width: 100%; height: 180px;
+   @include full('thumbnail/m_pd_3-removebg-preview.png',$size:contain){
+   
+    
+  
+  
+  
+  }
+  
+  }
+
+  @at-root .serch_description{
+    width: 100%; height: auto;
+      & > p{padding-top: 10px; font-size: 1.375rem;
+        font-weight: 700; text-align: center;}
+    }
+  }
+
+}//serch_con_wrap
+
+
+
