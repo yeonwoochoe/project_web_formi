@@ -4,7 +4,7 @@ $imgPath:'../../img/';
 
 
 #serchPdBox {
-    width: 100%; min-height: 400px; background-color: #fdf;
+    width: 100%; height: auto; background-color: nth($color_accent_01,1 );
 
 @at-root .serch_pd_wrap {
     position: relative; top: -100px; z-index: 1000;
@@ -12,7 +12,7 @@ $imgPath:'../../img/';
     margin: auto; background-color: #fff;
     box-shadow: 5px 5px 20px rgba(94, 94, 94, 0.15);
     @include handhelds {position: static;
-    width: 100%; height: 500px; padding:50px 20px;  margin: 0;
+    width: 100%; height: 360px; padding:50px 0;  margin: 0;
   background-color: #fff;}
 }
 
@@ -28,7 +28,7 @@ $imgPath:'../../img/';
   text-align: center; color:nth($color_black, 2);
   & h2 {font-size: map-get($font_size, point1);
   margin-bottom: 8px;}
-  & h3 {font-size: map-get($font_size,button1);
+  & h3 {font-size: map-get($font_size,button1); margin-bottom: 30px;
   font-weight: 400;}
   @include pc  {display: none;}
   @include laptop  {display: none;}
@@ -46,34 +46,43 @@ $imgPath:'../../img/';
 @at-root .serch_con_wrap { 
   width: 100%; height: auto;
   display: flex; justify-content: space-between;
-  @include handhelds { justify-content: space-around;
-  overflow-y: hidden; } 
+    @include handhelds { justify-content: space-around;
+    overflow-y: hidden; } 
 
   @at-root .serch_conbox {
+    position: relative;
     width: 180px; height: 148px;padding: 0;
     background-color: #fff;
-    @include handhelds {width: 120px; }
-  }
+    @include handhelds {width: 120px; height: 150px; 
+       background-color: #ddd; }
+    & .direc_btn {
+      position: absolute; top: 80%; z-index: 100; left: 50%; margin-left: -40px;
+      width: 80px; height: 26px; background-color: #f0d;
+      & > a {@include full; border-radius: 20px; background-color: $color_primary_02;
+      font-size: 12px; text-align: center; line-height: 26px; 
+      color: #333333;}
+      @include pc {display: none;}
+      @include laptop {display: none;}
+    }
+
+  }//.serch_conbox
 
   @at-root .serch_thumbnail {width: 100%; height: 180px;
    @include full('thumbnail/m_pd_3-removebg-preview.png',$size:contain){
-   
-    
+      }
   
-  
-  
-  }
-  
-  }
+  }//serch_thumbnail
 
   @at-root .serch_description{
     width: 100%; height: auto;
       & > p{padding-top: 10px; font-size: 1.375rem;
         font-weight: 700; text-align: center;}
     }
-  }
 
-}//serch_con_wrap
+
+  }//serch_con_wrap
+
+}
 
 
 

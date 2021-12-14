@@ -4,6 +4,8 @@
 
 
 //-----------------------------------------------------
+// color:nth($color_black, 1);;
+//font-size: map-get($font_size, title4)
 
 
 // font-set
@@ -79,6 +81,14 @@ $pc:1440px;
   }
 }
 
+@mixin desk(){
+  @media all and (max-width: #{$laptop - 1}) {
+    @content;
+  }
+}
+
+
+
 @mixin tablet(){
   @media all and (min-width:$tablet) and (max-width:#{$laptop - 1}) {
     @content; 
@@ -92,11 +102,8 @@ $pc:1440px;
 }
 
 
-@mixin desk(){
-  @media all and (max-width:#{$pc - 1}) {
-    @content; 
-  }
-}
+
+
 
 
 

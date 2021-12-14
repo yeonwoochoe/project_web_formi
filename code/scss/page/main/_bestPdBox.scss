@@ -1,0 +1,104 @@
+// bestPdBox
+$imgPath:"../../img/";
+
+
+#bestPdBox {
+    width: 100%; height: 800px; background-color: nth($color_accent_01,1 );
+     @include handhelds {height: auto; }
+    & .icon { width: 30px;height: 30px; margin: auto;
+        margin-bottom: 10px;background-color: #ffffff;}
+    & .best_title {  width: 100%; height: auto;
+        padding-top: 50px;
+        & h2 {  text-align: center; color: #171717;  font-size: map-get($font_size, title3);
+            margin-bottom: 40px;
+            @include handhelds { font-size: map-get($font_size, title4);}
+        
+        }//h2
+    @at-root .best_sub_title {  text-align: center;
+        text-transform: uppercase; color: #171717; margin-bottom: 10px;
+        font-size: map-get($font_size, point1); font-weight: 700; letter-spacing:-2px;
+        & i {  display: block; /*i태그는 인라인 요소이기 때문에 블록처리해야함*/
+            width: 40px; height: 40px; margin: auto;
+            background-image: url("../../img/vs_crown.svg");
+            background-repeat: no-repeat;
+            background-position: 50% 50%;
+            background-size:contain;}}
+    }
+
+@at-root .bset_pd_wrap { 
+    display: flex; justify-content: space-evenly;
+    width:  100%; height: auto; 
+    @include mobile { flex-direction: column;}
+    @include tablet{ flex-direction: row; flex-wrap: wrap; }
+    @include laptop{ flex-wrap: wrap;}
+  
+@at-root .best_conbox{
+  width: 300px; height: 440px; padding: 10px; background-color: #fff;
+  @include mobile {margin: auto; margin-bottom: 40px;}
+  @include tablet { margin-bottom: 40px;}
+  @include laptop {
+    &:nth-child(4) {display: none;}
+  }
+
+  & .thumbnail {  position: relative;
+    width: 100%; height: 280px;
+    background-color: #444;
+    & img {@include full;}
+  }
+
+  .shop_bag_icon {  position: absolute;
+    bottom: 15px; right: 15px;
+    width: 48px; height: 48px;
+    background-color: #fff;
+    border-radius: 100%; cursor: pointer;
+    &:hover {background-color: $color_primary_01;}
+    & img {transform: scale(0.7);
+      &:hover {filter: brightness(100);}
+      }
+    }
+  @at-root .description {  width: 100%; height: auto;
+  & .best_pd_name a {display: block;
+    padding-top: 10px;
+    font-size: 1.4rem;
+    text-decoration: none; }
+  & .sub_text { font-size: 0.95rem;
+    letter-spacing: -0.5px;padding-left: 0.2rem;
+    margin-top: 10px;}
+
+  @at-root .best_pd_price {margin-top: 20px;
+    @at-root .best_pd_per_price { display: inline-block;
+      margin: 3px 0px 0px 7px;
+      font-size: 1.05rem;color: #bebebe;
+      text-decoration: line-through; font-weight: 400;
+    @at-root .best_pd_p_dc { color: #333;
+      font-weight: 700;
+      font-size: 1.45rem;
+      letter-spacing: -0.05rem;}
+    }
+
+
+      @at-root .best_pd_sale_price {
+        float: right; margin: 0;
+        text-align: right; color: #f00;
+        font-weight: 700; font-size: 1.5em;
+        letter-spacing: -0.05rem;
+      }
+  
+  } 
+
+
+    }//description
+
+  
+  
+  }//best_conbox
+
+
+
+
+}//bset_pd_wrap
+
+
+
+
+  }
