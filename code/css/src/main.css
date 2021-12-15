@@ -576,7 +576,7 @@ body {
 
 #serchPdBox {
   width: 100%;
-  height: 550px;
+  height: auto;
   background-color: #F6FFE4;
 }
 @media all and (max-width: 1199px) {
@@ -786,7 +786,7 @@ body {
 #bestPdBox .best_title {
   width: 100%;
   height: auto;
-  padding-top: 50px;
+  padding-top: 80px;
 }
 #bestPdBox .best_title h2 {
   text-align: center;
@@ -857,7 +857,7 @@ body {
 @media all and (max-width: 767px) {
   .best_conbox {
     margin: auto;
-    margin-bottom: 40px;
+    margin-bottom: 70px;
   }
 }
 @media all and (min-width: 768px) and (max-width: 1199px) {
@@ -1220,7 +1220,7 @@ body {
   width: 100%;
   height: 800px;
   background-color: rgba(255, 216, 0, 0.1);
-  padding: 80px 0;
+  padding-top: 80px;
 }
 @media all and (min-width: 768px) and (max-width: 1199px) {
   #rivewPdBox {
@@ -1504,6 +1504,18 @@ body {
 #infoBox {
   width: 100%;
   height: 500px;
+  background-color: #fff;
+}
+@media all and (min-width: 1200px) and (max-width: 1439px) {
+  #infoBox {
+    height: auto;
+    padding: 80px 0px;
+  }
+}
+@media all and (max-width: 1199px) {
+  #infoBox {
+    display: block;
+  }
 }
 @media all and (min-width: 1440px) {
   .info_con_inner {
@@ -1521,17 +1533,139 @@ body {
   }
 }
 
-@media all and (min-width: 1200px) and (max-width: 1439px) {
-  #infoBox {
+.info_mo_inner {
+  display: none;
+}
+@media all and (max-width: 1199px) {
+  .info_mo_inner {
+    width: 100%;
     height: auto;
-    padding: 80px 0px;
+    padding: 30px 0;
+    display: flex;
+    justify-content: center;
+    background-color: #fdf;
+  }
+  .mo_conbox_list {
+    display: flex;
+    flex-direction: column;
+    border-radius: 5px;
+    width: 130px;
+    height: 130px;
+    margin-right: 12px;
+    padding: 10px;
+    background-color: #F2F2F2;
+  }
+}
+@media all and (max-width: 1199px) and (max-width: 767px) {
+  .mo_conbox_list {
+    margin-right: 8px;
   }
 }
 @media all and (max-width: 1199px) {
-  #infoBox {
-    display: none;
+  .mo_conbox_list:last-child {
+    margin-right: 0;
   }
 }
+@media all and (max-width: 1199px) {
+  .mo_conbox_list p {
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 14px;
+  }
+}
+@media all and (max-width: 1199px) and (min-width: 768px) and (max-width: 1199px) {
+  .mo_conbox_list p {
+    font-size: 16px;
+  }
+}
+@media all and (max-width: 1199px) {
+  .icon_box {
+    width: 50%;
+    height: 50%;
+    margin: auto;
+    background-color: #fd9;
+  }
+  .icon_box.user a {
+    display: block;
+    width: 100%;
+    height: 100%;
+    background-image: url(../../img/mo/mo_user.svg);
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    background-size: contain;
+  }
+  .icon_box.user a > span {
+    display: block;
+    position: absolute;
+    z-index: -1;
+    clip: rect(0 0 0 0);
+    width: 0;
+    height: 0;
+    overflow: hidden;
+  }
+  .icon_box.review a {
+    display: block;
+    width: 100%;
+    height: 100%;
+    background-image: url(../../img/mo/mo_review.svg);
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    background-size: contain;
+  }
+  .icon_box.review a > span {
+    display: block;
+    position: absolute;
+    z-index: -1;
+    clip: rect(0 0 0 0);
+    width: 0;
+    height: 0;
+    overflow: hidden;
+  }
+  .icon_box.notice a {
+    display: block;
+    width: 100%;
+    height: 100%;
+    background-image: url(../../img/mo/mo_notice.svg);
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    background-size: contain;
+  }
+  .icon_box.notice a > span {
+    display: block;
+    position: absolute;
+    z-index: -1;
+    clip: rect(0 0 0 0);
+    width: 0;
+    height: 0;
+    overflow: hidden;
+  }
+  .icon_box.faq a {
+    display: block;
+    width: 100%;
+    height: 100%;
+    background-image: url(../../img/mo/mo_faq.svg);
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    background-size: contain;
+  }
+  .icon_box.faq a > span {
+    display: block;
+    position: absolute;
+    z-index: -1;
+    clip: rect(0 0 0 0);
+    width: 0;
+    height: 0;
+    overflow: hidden;
+  }
+}
+@media all and (max-width: 1199px) and (max-width: 767px) {
+  .mo_conbox_list {
+    width: 70px;
+    height: 70px;
+    padding: 0;
+  }
+}
+
 .info_content_area_01 {
   width: 650px;
   height: 300px;
@@ -1552,6 +1686,36 @@ body {
     margin-bottom: 30px;
   }
 }
+@media all and (max-width: 1199px) {
+  .info_content_area_01 {
+    width: 100%;
+    height: 240px;
+    padding: 0;
+    border-style: none;
+    margin: auto;
+    background-color: #ff9;
+    display: flex;
+    justify-content: center;
+  }
+  .info_content_area_01 .infomation {
+    width: 150px;
+    height: 180px;
+    padding-top: 20px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    margin-right: 20px;
+    margin-left: 0;
+  }
+  .info_content_area_01 .infomation:last-child {
+    margin-right: 0;
+  }
+}
+@media all and (max-width: 1199px) and (min-width: 768px) and (max-width: 1199px) {
+  .info_content_area_01 .infomation {
+    width: 270px;
+    height: 240px;
+  }
+}
 .info_content_area_01 h3 {
   width: 100%;
   height: auto;
@@ -1562,6 +1726,11 @@ body {
   font-weight: 400;
   color: #333;
 }
+@media all and (max-width: 767px) {
+  .info_content_area_01 h3 {
+    font-size: 14px;
+  }
+}
 
 .cs_center {
   float: left;
@@ -1569,7 +1738,6 @@ body {
   height: 100%;
   margin: auto;
   text-align: center;
-  background-color: #fff;
 }
 .cs_number {
   display: block;
@@ -1578,6 +1746,11 @@ body {
   color: #70A103;
   margin-bottom: 20px;
 }
+@media all and (max-width: 767px) {
+  .cs_number {
+    font-size: 24px;
+  }
+}
 
 .all_sub {
   width: 100%;
@@ -1585,9 +1758,20 @@ body {
   font-size: 18px;
   font-weight: 400;
 }
+@media all and (max-width: 767px) {
+  .all_sub {
+    font-size: 12px;
+  }
+}
 
 .all_sub p {
   margin-bottom: 5px;
+}
+@media all and (max-width: 767px) {
+  .all_sub p {
+    letter-spacing: -1px;
+    font-size: 14px;
+  }
 }
 
 .bank_account {
@@ -1596,6 +1780,11 @@ body {
   height: 100%;
   margin: auto;
   text-align: center;
+}
+@media all and (max-width: 1199px) {
+  .bank_account {
+    display: block;
+  }
 }
 .bank_account .bank_forme {
   display: block;
@@ -1606,6 +1795,13 @@ body {
   font-size: 1.9rem;
   font-weight: 700;
   color: #70A103;
+}
+@media all and (max-width: 767px) {
+  .bank_account .bank_forme {
+    font-size: 24px;
+    letter-spacing: -3px;
+    margin-bottom: 2px;
+  }
 }
 
 @media all and (min-width: 1200px) and (max-width: 1439px) {
@@ -1631,6 +1827,11 @@ body {
 @media all and (min-width: 1200px) and (max-width: 1439px) {
   .info_content_area_02 {
     width: 300px;
+  }
+}
+@media all and (max-width: 1199px) {
+  .info_content_area_02 {
+    display: none;
   }
 }
 .info_content_area_02 .notice {
@@ -1691,6 +1892,11 @@ body {
 @media all and (min-width: 1200px) and (max-width: 1439px) {
   .info_content_area_03 {
     width: 300px;
+  }
+}
+@media all and (max-width: 1199px) {
+  .info_content_area_03 {
+    display: none;
   }
 }
 .info_content_area_03 .faq {
