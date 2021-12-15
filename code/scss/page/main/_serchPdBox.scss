@@ -1,18 +1,21 @@
 //#serchPdBox 
 
 $imgPath:'../../img/';
-
+body{width: 100%; }
 
 #serchPdBox {
-    width: 100%; height: auto; background-color: nth($color_accent_01,1 );
+    width: 100%; height: 550px;
+    background-color: nth($color_accent_01,1 ); 
+    @include handhelds { overflow-x: hidden;}
+   
 
 @at-root .serch_pd_wrap {
-    position: relative; top: -100px; z-index: 1000;
+    position: relative; top: -100px; z-index: 100;
     width: 1074px; height: 450px; padding: 30px 90px;
     margin: auto; background-color: #fff;
     box-shadow: 5px 5px 20px rgba(94, 94, 94, 0.15);
     @include handhelds {position: static;
-    width: 100%; height: 360px; padding:50px 0;  margin: 0;
+    width: 100%; height: 360px; padding:50px 0px;  margin: 0;
   background-color: #fff;}
 }
 
@@ -44,17 +47,26 @@ $imgPath:'../../img/';
 }
 
 @at-root .serch_con_wrap { 
-  width: 100%; height: auto;
+  width: 100%;  min-width: 500px; height: auto;
+  position: relative; left: 50%; transform: translateX(-50%); // 가로값이 지정이 안되었기떄문에
   display: flex; justify-content: space-between;
     @include handhelds { justify-content: space-around;
     overflow-y: hidden; } 
+    @include tablet { justify-content: center;}
+
 
   @at-root .serch_conbox {
-    position: relative;
-    width: 180px; height: 148px;padding: 0;
+    position: relative; width: 180px; height: 148px;padding: 0;
     background-color: #fff;
+
     @include handhelds {width: 120px; height: 150px; 
        background-color: #ddd; }
+
+    @include tablet {margin-right: 30px;
+      &:last-child {margin-right: 0;}
+   }
+
+
     & .direc_btn {
       position: absolute; top: 80%; z-index: 100; left: 50%; margin-left: -40px;
       width: 80px; height: 26px; background-color: #f0d;

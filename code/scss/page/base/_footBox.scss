@@ -1,0 +1,5 @@
+
+
+#footBox {
+  @include handhelds {display: none;}
+}

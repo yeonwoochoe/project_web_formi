@@ -3,30 +3,163 @@
 $imgPath:'../../img/';
 
 #rivewPdBox{
-    width: 100%; height: 900px;
+    width: 100%; height: 800px;
     background-color: rgba($color_primary_02,0.1);
-    padding: 100px 0;
+    padding: 80px 0;
+
+		@include tablet { height: auto; }
+		@include mobile { height: auto; padding: 40px 0;}
+
 
 	& h2 { text-align: center; color: #171717;
-		font-size: 2.25rem;}
+		font-size: 2.25rem; margin-bottom: 80px;
+		@include mobile { font-size: map-get($font_size,content1);
+			margin-bottom: 40px;}
+	}
+
 
 	& p { text-align: center; color: #171717;
-		font-size: 1.5rem; margin-bottom: 10px;}
+		font-size: 1.5rem; margin-bottom: 10px;
+		@include mobile { font-size: map-get($font_size,button1);}
+	}
 
 	
-	@at-root .revew_pd_wrap {
-		width: 100%; height: 420px;
-		margin: auto;}
+	@at-root .revew_pd_wrap { 
+		display: flex; justify-content: space-evenly;
+		width: 100%; height: auto; margin: auto;
+	 
+		@include laptop {
+			:nth-of-type(4) {display: none;}
+		}
+		@include tablet { flex-direction: row; flex-wrap: wrap;
+			width: 70%; margin: auto; min-width: 768px;
+		
+			@include mobile {display: none;}
+
+
+		}
+	}//revew_pd_wrap
+
+ @at-root .re_slide_wrapper {display: none;
+
+
+		@include mobile {  display: block;
+			
+			@at-root .re_slide_wrapper{
+			position: relative; width: 90%; margin: auto;
+			 height: 400px;  padding-bottom: 70px;
+			}
+		
+			@at-root .re_indi_container {
+				position: absolute; bottom: 10px; left: 50%; z-index: 100;
+				width: 100%; height: auto; padding: 5px; 
+				transform: translateX(-50%);
+				background-color: #555; 
+				& > ul {  
+					width:100%; height:30px; text-align: center; 
+					& > li {  
+						display: inline-block; width: 30px; height: 30px; 
+						margin-right: 20px; background-color: #fdf; 
+						&:last-child {margin-right: 0;}
+						@at-root .re_indicator a {
+							@include full;
+							background-color: #999; border-radius: 3.125rem; 
+					}
+				}
+			}
+		}//indi_container
+		
+		
+		
+		@at-root .review_btn {
+			position: absolute; top: 40%; 
+			left: 0; z-index: 500; width: 100%; height: 0;
+			& > button {  justify-content: space-between;
+				width: 60px; height: 60px;
+				color: #fff;background-color: #999; 
+		
+				&.next { float: right;
+					@include full('slick-next.svg',$size:contain) {
+						width: 60px; height: 60px	}
+				}
+			
+				&.prev { 
+					@include full('slick-prev.svg',$size:contain) {
+						width: 60px; height: 60px	}
+				}
+			
+			
+			}
+
+			}//view_btn
+		
+		
+			@at-root .review_area {
+				width: 100%; height: 100%; overflow: hidden;
+			}
+		
+			@at-root .re_slide_con_wrap {  position: relative;
+				height: 100%;
+				& > div {display: none; position: absolute;
+					top: 0; left: 0; width: 100%;height: 100%;
+				&.action{  display: block;
+					z-index: 5;
+		
+					}
+				}
+			}
+		
+			.slide_01 {
+				background-color: #4b97;
+				@include full ('img-box.png',$size:cover);
+			}
+			.slide_02 {
+				background-color: #73f7;
+			}
+			.slide_03 {
+				background-color: #6637;
+			}
+			.slide_04 {
+				background-color: #5af7;
+			}
+	
+	
+		
+		
+	}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ }
+
+
 
 	@at-root .revew_conbox {
-		position: relative; top: 150px; float: left;
-		width: 300px; height: 100%; margin-right: 32px; 
-		background-repeat: no-repeat;
-		background-position: 50%;
+		position: relative; 
+		width: 300px; height: 400px;
+		background-repeat: no-repeat; background-position: 50%;
 		background-size: cover;
 		background-image: url("https://picsum.photos/200/300");
 		&:last-child {margin-right: 0;}
 		
+		@include tablet {margin-bottom: 30px;}
+		@include mobile {display: none;}
+
+
 		& .direc_btn {
 			position: absolute; bottom: 50px; left: 50%;
 			margin-left: -100px;  z-index: 500;
@@ -53,6 +186,6 @@ $imgPath:'../../img/';
 
 		}
 	
-	}
+	}//.revew_conbox
 
 }
