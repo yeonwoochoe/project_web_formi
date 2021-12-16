@@ -5,27 +5,12 @@
   width: 100%;
   height: auto;
   min-height: 800px;
-  background-color: #ddd;
+  background-color: #fff;
 }
 @media all and (max-width: 767px) {
   #wrap {
     min-width: 320px;
-    background-color: #fda;
-  }
-}
-@media all and (min-width: 768px) and (max-width: 1199px) {
-  #wrap {
-    background-color: #adf;
-  }
-}
-@media all and (min-width: 1200px) and (max-width: 1439px) {
-  #wrap {
-    background-color: #fdf;
-  }
-}
-@media all and (min-width: 1440px) {
-  #wrap {
-    background-color: #faa;
+    background-color: #fff;
   }
 }
 
@@ -1512,9 +1497,9 @@ body {
     padding: 80px 0px;
   }
 }
-@media all and (max-width: 1199px) {
+@media all and (max-width: 767px) {
   #infoBox {
-    display: block;
+    height: auto;
   }
 }
 @media all and (min-width: 1440px) {
@@ -1543,7 +1528,6 @@ body {
     padding: 30px 0;
     display: flex;
     justify-content: center;
-    background-color: #fdf;
   }
   .mo_conbox_list {
     display: flex;
@@ -1583,7 +1567,6 @@ body {
     width: 50%;
     height: 50%;
     margin: auto;
-    background-color: #fd9;
   }
   .icon_box.user a {
     display: block;
@@ -1693,7 +1676,6 @@ body {
     padding: 0;
     border-style: none;
     margin: auto;
-    background-color: #ff9;
     display: flex;
     justify-content: center;
   }
@@ -1925,9 +1907,194 @@ body {
   top: 80px;
 }
 
+#footBox {
+  width: 100%;
+  height: 200px;
+  background-color: #333333;
+}
 @media all and (max-width: 1199px) {
   #footBox {
+    height: 340px;
+  }
+}
+.footbox_wrapper {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  padding: 40px 40px 0 20px;
+  box-sizing: border-box;
+}
+@media all and (min-width: 1440px) {
+  .footbox_wrapper {
+    justify-content: space-between;
+  }
+}
+@media all and (min-width: 1200px) and (max-width: 1439px) {
+  .footbox_wrapper {
+    justify-content: space-between;
+  }
+}
+@media all and (max-width: 1199px) {
+  .footbox_wrapper {
+    flex-direction: column;
+    padding: 10px;
+  }
+}
+
+.footbox_area_01 {
+  width: auto;
+  height: auto;
+}
+.footbox_area_01 address {
+  font-size: 14px;
+  height: auto;
+  font-weight: 100;
+  color: #fff;
+}
+.footbox_area_01 address p {
+  margin-bottom: 5px;
+}
+@media all and (max-width: 1199px) {
+  .footbox_area_01 address p {
+    font-size: 12px;
+    word-break: keep-all;
+  }
+}
+
+.footbox_area_02 {
+  width: 400px;
+  height: 160px;
+}
+@media all and (max-width: 1199px) {
+  .footbox_area_02 {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    height: 170px;
+    width: 80%;
+    order: -1;
+  }
+}
+.membership_btn {
+  height: 40px;
+  text-align: center;
+  margin: 0;
+  line-height: 40px;
+  background-color: #FFD800;
+}
+.membership_btn a {
+  display: block;
+  width: 100%;
+  height: 100%;
+  font-size: 0.9rem;
+  font-weight: 400;
+}
+@media all and (max-width: 1199px) {
+  .membership_btn a {
+    font-size: 16px;
+  }
+}
+.membership_btn span {
+  margin-left: 10px;
+  font-size: 0.5rem;
+  text-transform: uppercase;
+}
+@media all and (max-width: 767px) {
+  .membership_btn span {
     display: none;
+  }
+}
+.membership_btn span::before {
+  content: "";
+  display: inline-block;
+  width: 36px;
+  margin: 3px 6px;
+  border-top: 1px solid #333;
+}
+
+.sns_btn {
+  float: right;
+  width: 180px;
+  height: 50px;
+  margin-top: 20px;
+}
+@media all and (max-width: 1199px) {
+  .sns_btn {
+    float: left;
+    order: -1;
+    margin: 0;
+  }
+}
+.sns_btn ul {
+  width: auto;
+  height: 100%;
+}
+.sns_btn ul li {
+  float: left;
+  width: 50px;
+  height: 50px;
+  margin-left: 10px;
+}
+.sns_btn ul li a {
+  float: left;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  line-height: 45px;
+  border-radius: 100%;
+  background-color: #fff;
+}
+
+.footbox_area_03 {
+  clear: both;
+  width: 100%;
+  height: 40px;
+  background-color: #555;
+}
+.foot_info {
+  width: 100%;
+  height: 40px;
+  margin: auto;
+}
+.foot_info ul {
+  width: 100%;
+  height: 40px;
+  text-align: center;
+}
+.foot_info ul li {
+  position: relative;
+  display: inline-block;
+  width: auto;
+  height: auto;
+  margin: 0 10px;
+}
+.foot_info ul li::after {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 50%;
+  right: -12px;
+  width: 1px;
+  height: 20%;
+  transform: translateY(-50%);
+  background-color: #fff9;
+}
+.foot_info li:last-child::after {
+  display: none;
+}
+
+.foot_info ul li a {
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+  color: #fff;
+  text-align: center;
+  font-size: 13.6px;
+  line-height: 40px;
+}
+@media all and (max-width: 767px) {
+  .foot_info ul li a {
+    font-size: 12px;
   }
 }
 
