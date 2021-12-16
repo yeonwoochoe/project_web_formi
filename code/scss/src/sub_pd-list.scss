@@ -1,0 +1,30 @@
+// sub_login.scss
+/* sub_login.css */
+
+@import "../common/variable";
+@import "../common/mixin";
+
+// --------------------------------
+
+#wrap {
+  width:100%;  
+  height:auto; min-height:800px;
+  background-color: #fff;
+  @include mobile{ min-width:320px;  background-color: #fff; }
+  // @include tablet{ background-color: #adf;  }
+  // @include laptop{ background-color: #fdf;  }
+  // @include pc{ background-color: #faa; }
+}// #wrap 
+
+
+
+// -------------------------------------------
+  @import "../page/base/headBox";
+
+  @import "../page/sub_pd-list/mainPdBox";
+  @import "../page/sub_pd-list/viewBox";
+
+
+  @import "../page/main/infoBox";
+  @import "../page/base/footBox";
+// -------------------------------------------
