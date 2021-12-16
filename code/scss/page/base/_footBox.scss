@@ -13,7 +13,8 @@ $imgPath:'../../img/';
    
     @include pc {justify-content: space-between;}
     @include laptop {justify-content: space-between;}
-    @include handhelds {flex-direction: column; padding: 10px;}
+    @include tablet {flex-direction: column; padding: 30px;}
+    @include mobile {flex-direction: column; padding: 10px;}
   }
     @at-root .footbox_area_01 {
       width: auto;  height: auto;

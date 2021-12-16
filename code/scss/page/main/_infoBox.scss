@@ -29,7 +29,8 @@ $imgPath:'../../img/';
           background-color: nth($color_gray, 1);
           &:last-child{margin-right: 0;}
           & p {text-align: center; text-transform:uppercase;
-            font-size: map-get($font_size,button1);
+            padding-bottom: 5px;
+            font-size: map-get($font_size,button2);
             @include tablet { font-size: map-get($font_size,content3);
 
             }
