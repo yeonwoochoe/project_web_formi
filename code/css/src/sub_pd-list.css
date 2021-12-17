@@ -421,56 +421,60 @@ fieldset {
 
 #mainPdBox {
   width: 100%;
-  height: 1800px;
-  padding: 80px 0;
+  height: auto;
   background-color: #333;
 }
 .main_pd_wrap {
+  display: flex;
+  justify-content: space-around;
   width: 100%;
-  height: 440px;
-  margin: auto;
+  height: auto;
   margin-top: 120px;
   background-color: #333;
+}
+@media all and (max-width: 767px) {
+  .main_pd_wrap {
+    flex-direction: column;
+  }
+}
+@media all and (min-width: 768px) and (max-width: 1199px) {
+  .main_pd_wrap {
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin: 0;
+    width: 70%;
+    min-width: 768px;
+  }
 }
 
 .second {
   margin-bottom: 160px;
 }
 
-.main_title {
+.main_pd_title {
   width: 100%;
   height: auto;
-  margin-bottom: 180px;
 }
-
-#mainPdBox #mainPdBox .icon {
-  width: 30px;
-  height: 30px;
-  margin: auto;
-  margin-bottom: 10px;
-  background-color: #fff;
-}
-#mainPdBox #mainPdBox h2 {
+.main_pd_title h2 {
   width: 100%;
   height: auto;
   text-align: center;
-  margin-bottom: 50px;
   color: #fff;
+  padding: 80px 0;
   font-size: 2.5rem;
 }
-#mainPdBox .tab_title_area {
-  /* float: left; */
+
+.tab_title_area {
   width: 600px;
   height: 60px;
   margin: auto;
 }
-#mainPdBox .tab_title_area > ul {
+.tab_title_area > ul {
   width: 100%;
   height: 100%;
   box-sizing: border-box;
-  /* border-bottom: 1px solid #ddd; */
 }
-#mainPdBox .tab_title_area li {
+.tab_title_area li {
   float: left;
   width: 200px;
   height: 100%;
@@ -480,126 +484,129 @@ fieldset {
   text-align: center;
   line-height: 60px;
 }
-#mainPdBox .tab_title_area li:nth-child(1) {
+.tab_title_area li.action {
+  background-color: #70A103;
+}
+.tab_title_area li.action button {
+  color: #fff;
+}
+.tab_title_area li:hover {
+  background-color: #70A103;
+}
+.tab_title_area li:hover button {
+  color: #fff;
+}
+.tab_title_area li:nth-child(1) {
   border-radius: 5px 0 0 5px;
 }
-#mainPdBox .tab_title_area li:nth-child(3) {
+.tab_title_area li:nth-child(3) {
   border-radius: 0 5px 5px 0;
 }
-#mainPdBox .tab_title_area li:hover {
-  background-color: #70A103;
-}
-#mainPdBox .tab_title_area li:hover button {
-  color: #fff;
-}
-#mainPdBox .tab_title_area li.action {
-  background-color: #70A103;
-}
-#mainPdBox .tab_title_area li.action button {
-  color: #fff;
-}
-#mainPdBox .tab_title_area button {
+
+.tab_title_area > ul button {
   width: 100%;
   height: 100%;
   font-size: 1rem;
   font-weight: 700;
 }
-#mainPdBox .tab_content_area {
+
+.tab_content_area {
   width: 100%;
   height: 100%;
 }
-#mainPdBox .tab_content_area > div.action {
+.tab_content_area > div.action {
   display: block;
 }
-#mainPdBox .tab_con_detail_01 {
+.tab_con_detail_01 {
   display: none;
   width: 100%;
   height: 100%;
   background-color: #040;
 }
-#mainPdBox .tab_con_detail_02 {
+
+.tab_con_detail_02 {
   display: none;
   width: 100%;
   height: 100%;
   background-color: #333;
 }
-#mainPdBox .tab_con_detail_03 {
+
+.tab_con_detail_03 {
   display: none;
   width: 100%;
   height: 100%;
   background-color: #040;
 }
-#mainPdBox .main_conbox {
-  float: left;
+
+.main_conbox {
   width: 300px;
   height: 440px;
   padding: 10px;
-  margin-right: 100px;
   background-color: #fff;
 }
-#mainPdBox .main_conbox:last-child {
-  margin-right: 0;
-}
-#mainPdBox .main_conbox .thumbnail {
+.main_conbox .thumbnail {
   position: relative;
   float: left;
   width: 100%;
   height: 280px;
   background-color: #444;
 }
-#mainPdBox .thumbnail img {
+.main_conbox .thumbnail img {
   float: left;
   width: 100%;
   height: 100%;
 }
-#mainPdBox .shop_bag_icon {
+.main_conbox .thumbnail .shop_bag_icon {
   position: absolute;
   bottom: 15px;
   right: 15px;
   width: 48px;
   height: 48px;
   background-color: #fff;
-  /* background-image: url(../../img/shopping-bag.svg);
-  background-repeat: no-repeat;
-  background-position: 50% 50%; */
   border-radius: 100%;
   cursor: pointer;
 }
-#mainPdBox .shop_bag_icon:hover {
-  background-color: #70A103;
-}
-#mainPdBox .shop_bag_icon img {
+.main_conbox .thumbnail .shop_bag_icon img {
   transform: scale(0.7);
 }
-#mainPdBox .shop_bag_icon img:hover {
+.main_conbox .thumbnail .shop_bag_icon img:hover {
   filter: brightness(100);
 }
-#mainPdBox .description {
+.main_conbox .thumbnail .shop_bag_icon:hover {
+  background-color: #70A103;
+}
+.description {
   float: left;
   width: 100%;
   height: 160px;
 }
-#mainPdBox .main_pd_name a {
+.description .main_pd_name {
+  width: auto;
+  height: auto;
+}
+.description .main_pd_name a {
   display: block;
   padding-top: 10px;
   font-size: 1.4rem;
   text-decoration: none;
 }
-#mainPdBox .main_pd_name .sub_text {
+.description .main_pd_name .sub_text {
   font-size: 0.95rem;
   padding-left: 0.2rem;
   margin-top: 10px;
 }
-#mainPdBox .main_pd_price {
+
+.main_pd_price {
   margin-top: 20px;
 }
-#mainPdBox .main_pd_p_dc {
+.main_pd_p_dc {
   color: #333;
   font-weight: 700;
   font-size: 1.45rem;
   letter-spacing: -0.05rem;
 }
-#mainPdBox .main_pd_per_price {
+
+.main_pd_per_price {
   display: inline-block;
   margin: 3px 0px 0px 7px;
   font-size: 1.05rem;
@@ -607,7 +614,8 @@ fieldset {
   text-decoration: line-through;
   font-weight: 400;
 }
-#mainPdBox .main_pd_sale_price {
+
+.main_pd_sale_price {
   float: right;
   margin: 3px 4px 0px 0px;
   text-align: right;
@@ -616,16 +624,17 @@ fieldset {
   font-size: 1.5em;
   letter-spacing: -0.05rem;
 }
-#mainPdBox .pd_btn_wrap {
+
+.pd_btn_wrap {
   position: relative;
   width: 300px;
-  height: 60px;
+  height: 200px;
   margin: auto;
 }
-#mainPdBox .pd_btn_wrap button {
+.pd_btn_wrap button {
   border: 0.2px solid #B1B1B1;
 }
-#mainPdBox .next {
+.pd_btn_wrap button.next {
   float: right;
   width: 60px;
   height: 60px;
@@ -634,7 +643,7 @@ fieldset {
   background-repeat: no-repeat;
   background-position: 50% 50%;
 }
-#mainPdBox .prev {
+.pd_btn_wrap button.prev {
   float: left;
   width: 60px;
   height: 60px;
@@ -643,7 +652,11 @@ fieldset {
   background-repeat: no-repeat;
   background-position: 50% 50%;
 }
-#mainPdBox .page_counut {
+.pd_btn_wrap button:hover {
+  background-color: #ddd;
+}
+
+.page_counut {
   position: absolute;
   top: 20px;
   right: 70px;
@@ -651,7 +664,7 @@ fieldset {
   height: 40px;
   margin: auto;
 }
-#mainPdBox .page_counut li {
+.page_counut li {
   float: left;
   width: 40px;
   height: 40px;
@@ -659,23 +672,20 @@ fieldset {
   background-color: #fff;
   border: 0.2px solid #B1B1B1;
 }
-#mainPdBox .page_counut li:hover {
-  background-color: #333;
-  color: #fff;
-}
-#mainPdBox .pd_btn_wrap button:hover {
-  background-color: #ddd;
-}
-#mainPdBox .page_counut li:last-child {
-  margin-right: 0;
-}
-#mainPdBox .page_counut li a {
+.page_counut li a {
   display: block;
   width: 100%;
   height: 100%;
   text-align: center;
   line-height: 40px;
   font-weight: 700;
+}
+.page_counut li:last-child {
+  margin-right: 0;
+}
+.page_counut li:hover {
+  background-color: #333;
+  color: #fff;
 }
 
 #viewBox {
