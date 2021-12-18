@@ -438,6 +438,7 @@ fieldset {
     flex-wrap: wrap;
     width: 80%;
     margin: auto;
+    max-width: 1440px;
     margin-top: 120px;
     justify-content: space-around;
   }
@@ -577,6 +578,11 @@ fieldset {
   }
 }
 @media all and (min-width: 768px) and (max-width: 1199px) {
+  .main_conbox:last-child {
+    display: none;
+  }
+}
+@media all and (min-width: 1440px) {
   .main_conbox:last-child {
     display: none;
   }
