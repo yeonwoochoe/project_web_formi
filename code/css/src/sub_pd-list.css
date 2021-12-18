@@ -426,29 +426,37 @@ fieldset {
 }
 .main_pd_wrap {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
+  flex-wrap: wrap;
   width: 100%;
   height: auto;
   margin-top: 120px;
   background-color: #333;
 }
-@media all and (max-width: 767px) {
+@media all and (min-width: 1440px) {
   .main_pd_wrap {
-    flex-direction: column;
+    flex-wrap: wrap;
+    width: 80%;
+    margin: auto;
+    margin-top: 120px;
+    justify-content: space-around;
+  }
+}
+@media all and (min-width: 1200px) and (max-width: 1439px) {
+  .main_pd_wrap {
+    justify-content: space-evenly;
   }
 }
 @media all and (min-width: 768px) and (max-width: 1199px) {
   .main_pd_wrap {
-    flex-direction: row;
-    flex-wrap: wrap;
-    margin: 0;
-    width: 70%;
-    min-width: 768px;
+    justify-content: space-evenly;
   }
 }
-
-.second {
-  margin-bottom: 160px;
+@media all and (max-width: 767px) {
+  .main_pd_wrap {
+    flex-direction: column;
+    align-content: center;
+  }
 }
 
 .main_pd_title {
@@ -469,10 +477,23 @@ fieldset {
   height: 60px;
   margin: auto;
 }
+@media all and (max-width: 767px) {
+  .tab_title_area {
+    width: 100%;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+  }
+}
 .tab_title_area > ul {
   width: 100%;
   height: 100%;
   box-sizing: border-box;
+}
+@media all and (max-width: 767px) {
+  .tab_title_area > ul {
+    width: auto;
+  }
 }
 .tab_title_area li {
   float: left;
@@ -483,6 +504,11 @@ fieldset {
   background-color: #fff;
   text-align: center;
   line-height: 60px;
+}
+@media all and (max-width: 767px) {
+  .tab_title_area li {
+    width: 100px;
+  }
 }
 .tab_title_area li.action {
   background-color: #70A103;
@@ -542,7 +568,18 @@ fieldset {
   width: 300px;
   height: 440px;
   padding: 10px;
+  margin-bottom: 100px;
   background-color: #fff;
+}
+@media all and (min-width: 1200px) and (max-width: 1439px) {
+  .main_conbox {
+    width: 320px;
+  }
+}
+@media all and (min-width: 768px) and (max-width: 1199px) {
+  .main_conbox:last-child {
+    display: none;
+  }
 }
 .main_conbox .thumbnail {
   position: relative;
