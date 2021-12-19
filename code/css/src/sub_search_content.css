@@ -432,7 +432,12 @@ fieldset {
   width: 100%;
   height: 100%;
   margin: auto;
-  padding-top: 300px;
+  padding: 300px 0;
+}
+@media all and (max-width: 767px) {
+  .question_area {
+    padding: 150px 0;
+  }
 }
 .q_main_title {
   text-align: center;
@@ -445,7 +450,7 @@ fieldset {
 }
 @media all and (max-width: 767px) {
   .q_main_title h2 {
-    font-size: 28px;
+    font-size: 24px;
   }
 }
 .q_main_title p {
@@ -453,12 +458,23 @@ fieldset {
   font-size: 1.375rem;
   font-weight: 400;
 }
+@media all and (max-width: 767px) {
+  .q_main_title p {
+    font-size: 16px;
+  }
+}
 
 .question-list {
   width: 100%;
   height: auto;
-  margin-bottom: 180px;
+  margin-bottom: 140px;
   text-align: center;
+  padding-bottom: 50px;
+}
+@media all and (max-width: 767px) {
+  .question-list {
+    padding-bottom: 10px;
+  }
 }
 .question-list .q-no {
   margin-bottom: 10px;
@@ -472,16 +488,36 @@ fieldset {
   font-weight: 500;
   color: #fff;
 }
+@media all and (max-width: 767px) {
+  .question-list h3 {
+    font-size: 22px;
+  }
+}
+.question-list h3:nth-child(2) {
+  word-break: keep-all;
+}
 
 .q-item {
   width: 100%;
   height: 280px;
+}
+@media all and (max-width: 767px) {
+  .q-item {
+    height: auto;
+  }
 }
 
 .gender_wrap {
   width: 420px;
   height: auto;
   margin: auto;
+}
+@media all and (max-width: 767px) {
+  .gender_wrap {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
 }
 
 .q-chk-box {
@@ -491,6 +527,13 @@ fieldset {
   height: 200px;
   margin-right: 20px;
   margin-top: 40px;
+}
+@media all and (max-width: 767px) {
+  .q-chk-box {
+    width: 140px;
+    height: 140px;
+    margin-right: 10px;
+  }
 }
 
 .question-list input:focus + label {
@@ -513,9 +556,29 @@ fieldset {
   border-radius: 100%;
   border: 4px solid rgba(255, 255, 255, 0.7);
 }
+@media all and (max-width: 767px) {
+  .gender_box {
+    width: 140px;
+    height: 140px;
+    background-image: url("../../img/user/female.svg");
+    background-repeat: no-repeat;
+    background-position: 50% 20%;
+    background-size: 60%;
+  }
+}
 
 .ma {
   background-position: -900px -25px;
+}
+@media all and (max-width: 767px) {
+  .ma {
+    width: 140px;
+    height: 140px;
+    background-image: url("../../img/user/male.svg");
+    background-repeat: no-repeat;
+    background-position: 50% 20%;
+    background-size: 60%;
+  }
 }
 
 .gender_box {
@@ -523,6 +586,12 @@ fieldset {
   box-sizing: border-box;
   color: #fff;
   font-size: 1.5rem;
+  margin: 0;
+}
+@media all and (max-width: 767px) {
+  .gender_box {
+    padding-top: 90px;
+  }
 }
 
 .q-chk-box > input:checked + label {
@@ -530,10 +599,26 @@ fieldset {
   background-position: -700px -25px;
   color: #333;
 }
+@media all and (max-width: 767px) {
+  .q-chk-box > input:checked + label {
+    background-image: url("../../img/user/female-1.svg");
+    background-repeat: no-repeat;
+    background-position: 50% 20%;
+    background-size: 60%;
+  }
+}
 
 .q-chk-box > input:checked + .ma {
   background-color: white;
   background-position: -1100px -25px;
+}
+@media all and (max-width: 767px) {
+  .q-chk-box > input:checked + .ma {
+    background-image: url("../../img/user/male-1.svg");
+    background-repeat: no-repeat;
+    background-position: 50% 20%;
+    background-size: 60%;
+  }
 }
 
 .qs-item {
@@ -558,6 +643,14 @@ fieldset {
     flex-wrap: wrap;
   }
 }
+@media all and (max-width: 767px) {
+  .qs_wrap {
+    flex-direction: column;
+    justify-content: center;
+    height: auto;
+    align-items: center;
+  }
+}
 
 .qs_con {
   float: left;
@@ -570,6 +663,13 @@ fieldset {
     width: 120px;
   }
 }
+@media all and (max-width: 767px) {
+  .qs_con {
+    width: 280px;
+    margin-right: 0;
+    margin-bottom: 20px;
+  }
+}
 
 .qs_wrap.pp {
   display: flex;
@@ -579,10 +679,20 @@ fieldset {
   margin: auto;
   max-width: 1440px;
 }
+@media all and (max-width: 767px) {
+  .qs_wrap.pp {
+    height: auto;
+  }
+}
 
 .qs_con.pp {
   width: 200px;
   margin-bottom: 20px;
+}
+@media all and (max-width: 767px) {
+  .qs_con.pp {
+    width: 280px;
+  }
 }
 
 .qs_con:last-child {
@@ -625,9 +735,24 @@ fieldset {
     width: calc((90% - 100px) / 3);
   }
 }
+@media all and (min-width: 1200px) and (max-width: 1439px) {
+  .qs_con.life {
+    width: calc((90% - 100px) / 3);
+  }
+}
+@media all and (max-width: 767px) {
+  .qs_con.life {
+    width: 280px;
+  }
+}
 
 .qs_wrap.pp {
   margin-bottom: 30px;
+}
+@media all and (max-width: 767px) {
+  .qs_wrap.pp {
+    margin-bottom: 0;
+  }
 }
 
 .pp2 .life {
@@ -639,15 +764,27 @@ fieldset {
     margin-bottom: 30px;
   }
 }
+@media all and (max-width: 767px) {
+  .pp2 .life {
+    width: 280px;
+  }
+}
 
 .q_btn_wrap {
   width: 340px;
   height: 80px;
   margin: auto;
+  margin-bottom: 20px;
   background-color: #333333;
+}
+@media all and (max-width: 767px) {
+  .q_btn_wrap {
+    width: 280px;
+  }
 }
 
 .q_btn_wrap button {
+  display: block;
   width: 100%;
   height: 100%;
   line-height: 80px;
@@ -881,9 +1018,16 @@ fieldset {
     padding-top: 20px;
     background-color: #fff;
     border: 1px solid #ddd;
-    margin-right: 20px;
+    margin-right: 15px;
     margin-left: 0;
   }
+}
+@media all and (max-width: 1199px) and (max-width: 767px) {
+  .info_content_area_01 .infomation {
+    margin-right: 5px;
+  }
+}
+@media all and (max-width: 1199px) {
   .info_content_area_01 .infomation:last-child {
     margin-right: 0;
   }
