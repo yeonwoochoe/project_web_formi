@@ -443,6 +443,11 @@ fieldset {
   margin-bottom: 20px;
   font-size: 3rem;
 }
+@media all and (max-width: 767px) {
+  .q_main_title h2 {
+    font-size: 28px;
+  }
+}
 .q_main_title p {
   text-align: center;
   font-size: 1.375rem;
@@ -568,10 +573,11 @@ fieldset {
 
 .qs_wrap.pp {
   display: flex;
-  justify-content: space-evenly;
+  justify-content: center;
   width: 100%;
   height: 100px;
   margin: auto;
+  max-width: 1440px;
 }
 
 .qs_con.pp {
@@ -609,6 +615,16 @@ fieldset {
 .qs_con.life {
   width: calc((100% - 40px) / 3);
 }
+@media all and (min-width: 768px) and (max-width: 1199px) {
+  .qs_con.life {
+    width: calc((100% - 100px) / 3);
+  }
+}
+@media all and (min-width: 1440px) {
+  .qs_con.life {
+    width: calc((90% - 100px) / 3);
+  }
+}
 
 .qs_wrap.pp {
   margin-bottom: 30px;
@@ -616,6 +632,12 @@ fieldset {
 
 .pp2 .life {
   width: calc((100% - 40px) / 4);
+}
+@media all and (min-width: 768px) and (max-width: 1199px) {
+  .pp2 .life {
+    width: calc((100% - 30px) / 3);
+    margin-bottom: 30px;
+  }
 }
 
 .q_btn_wrap {
