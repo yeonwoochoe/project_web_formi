@@ -94,7 +94,7 @@ $imgPath:'../../img/';
 
       @include laptop { width: 320px;} 
       @include tablet{&:last-child {display: none;}}
-      @include pc{&:last-child {display: none;}}
+      // @include pc{&:last-child {display: none;}}
 
 
       & .thumbnail { position: relative;

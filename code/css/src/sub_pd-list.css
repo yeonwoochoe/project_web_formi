@@ -582,11 +582,6 @@ fieldset {
     display: none;
   }
 }
-@media all and (min-width: 1440px) {
-  .main_conbox:last-child {
-    display: none;
-  }
-}
 .main_conbox .thumbnail {
   position: relative;
   float: left;
@@ -1015,9 +1010,16 @@ fieldset {
     padding-top: 20px;
     background-color: #fff;
     border: 1px solid #ddd;
-    margin-right: 20px;
+    margin-right: 15px;
     margin-left: 0;
   }
+}
+@media all and (max-width: 1199px) and (max-width: 767px) {
+  .info_content_area_01 .infomation {
+    margin-right: 5px;
+  }
+}
+@media all and (max-width: 1199px) {
   .info_content_area_01 .infomation:last-child {
     margin-right: 0;
   }
