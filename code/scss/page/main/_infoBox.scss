@@ -81,7 +81,7 @@ $imgPath:'../../img/';
  
     & .infomation 
       {  width: 150px; height: 180px; padding-top: 20px; 
-      background-color: #fff; border: 1px solid #ddd; margin-right: 15px; margin-left: 0;
+      background-color: #fff; border: 1px solid #ddd; margin-right: 20px; margin-left: 0;
       @include mobile {margin-right: 5px;}
       &:last-child {margin-right: 0;}
     
