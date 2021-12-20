@@ -433,6 +433,7 @@ fieldset {
 @media all and (max-width: 767px) {
   .login_area {
     width: 100%;
+    max-width: 460px;
   }
 }
 

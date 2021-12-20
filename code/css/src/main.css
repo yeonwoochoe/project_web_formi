@@ -673,8 +673,8 @@ body {
 }
 @media all and (max-width: 1199px) {
   .serch_con_wrap {
-    justify-content: space-around;
-    overflow-y: hidden;
+    justify-content: center;
+    overflow: hidden;
   }
 }
 @media all and (min-width: 768px) and (max-width: 1199px) {
@@ -693,12 +693,8 @@ body {
   .serch_conbox {
     width: 120px;
     height: 150px;
+    margin-right: 24px;
     background-color: #ddd;
-  }
-}
-@media all and (min-width: 768px) and (max-width: 1199px) {
-  .serch_conbox {
-    margin-right: 30px;
   }
   .serch_conbox:last-child {
     margin-right: 0;
@@ -746,6 +742,11 @@ body {
   background-repeat: no-repeat;
   background-position: 50% 50%;
   background-size: contain;
+}
+@media all and (max-width: 767px) {
+  .serch_thumbnail {
+    width: 120px;
+  }
 }
 .serch_thumbnail > span {
   display: block;
