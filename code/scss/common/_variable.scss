@@ -12,8 +12,19 @@ $color_accent_01 : (#F6FFE4, #99C440);
 $color_accent_02 : #591902;
 $color_accent_03 : #0375CD;
 $color_gray: (#F2F2F2, #B1B1B1, #505050); // list
+$color_gray_01: #f2f2f2;
+$color_gray_02: #090707;
+
+
+
+$color_deep_gray_01: #505050;
 $color_black: (#333333, #171717 ); // list
+$color_black_01: #333;
+$color_black_02: #171717;
 $color_gray_op: rgba(85,85,85,0.1);
+
+
+
 
 // font ===========================
 $font_family_en:"Roboto", "Noto Sans KR";
@@ -27,6 +38,17 @@ $font_size:(
   title2:48px,title3:36px,title4:28px,point1:24px,point2:20px,
   content1:22px, content2:18px, content3:16px, 
   button1:14px,  button2:12px, caption:10px);
+
+
+// // line ==================================
+// $line_01: 0.0625rem solid $color_gray_02;
+// $line_02: 0.0625rem solid $color_gray_04;
+// $line_03: 0.0625rem solid $color_black_02;
+// $line_04: 0.0625rem solid $color_deep_gray_01;
+
+
+
+
 
 // device size ================================
 $mobile : 320px;

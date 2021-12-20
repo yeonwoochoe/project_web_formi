@@ -8,11 +8,21 @@
 //font-size: map-get($font_size, title4)
 
 
-// font-set
-// @mixin font_set (){
-//   font-family:$font_family_en,  $font_family_kr,  $font_family_common; 
-// }
+// font
+@mixin fontSet {
+	font-family: $font_family_en, $font_family_kr, $font_family_common;
+}
 
+@mixin font ($size, $weight:false, $line:false){
+	@include pxRem(font-size, $size);
+	@if($weight) {
+		font-weight: $weight;
+	}
+	@if($line) {
+		line-height: $line;
+	}
+	@content;
+}
 @mixin text_option($size:title3, $weight:4, $line:false){ 
   font-size:map-get($map:$font_size, $key: $size);
   font-weight:nth($font_weight,$weight);
@@ -62,10 +72,14 @@ $imgPath:"../../img/";
 
 // unit
 $baseSize: 16;
-@mixin remUnit($name, $unit){
-  #{$name}: #{$unit} + px;
-  #{$name}: math.div($unit , $baseSize) + rem;
+@mixin pxRem($name, $unit) {
+	#{$name}: #{$unit} + px;
+	#{$name}: math.div($unit, $baseSize) + rem; // math 기능을 써야 에러가 나지 않는다.
 }
+
+
+
+
 
 // @media query --------------------------------------
 $mobile : 320px;
