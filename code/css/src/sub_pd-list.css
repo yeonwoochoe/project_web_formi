@@ -355,9 +355,12 @@ h1 > a > span {
   display: flex;
 }
 
+.mo_nav_container {
+  display: none;
+}
 @media all and (max-width: 767px) {
-  .mo_nav_container {
-    display: none;
+  .mo_nav_container.on {
+    display: flex;
     flex-direction: column;
     align-items: flex-start;
     padding: 30px;
