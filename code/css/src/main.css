@@ -671,15 +671,48 @@ fieldset {
   height: 0;
 }
 .view_btn > button {
-  float: left;
-  justify-content: space-between;
-  width: 138px;
-  height: 138px;
-  color: #fff;
   background-color: #999;
 }
-.view_btn .next {
+.view_btn > button.next {
   float: right;
+  display: block;
+  width: 100%;
+  height: 100%;
+  background-image: url(../../img/slick-next.svg);
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  background-size: contain;
+  width: 80px;
+  height: 80px;
+}
+.view_btn > button.next > span {
+  display: block;
+  position: absolute;
+  z-index: -1;
+  clip: rect(0 0 0 0);
+  width: 0;
+  height: 0;
+  overflow: hidden;
+}
+.view_btn > button.prev {
+  display: block;
+  width: 100%;
+  height: 100%;
+  background-image: url(../../img/slick-prev.svg);
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  background-size: contain;
+  width: 80px;
+  height: 80px;
+}
+.view_btn > button.prev > span {
+  display: block;
+  position: absolute;
+  z-index: -1;
+  clip: rect(0 0 0 0);
+  width: 0;
+  height: 0;
+  overflow: hidden;
 }
 
 .view_area {
@@ -1247,11 +1280,11 @@ body {
   text-align: center;
   line-height: 72px;
 }
-.tab_title_area li:hover {
-  background-color: #70A103;
-}
 .tab_title_area li.action {
   border-bottom: 7px solid #567e00;
+}
+.tab_title_area li:hover {
+  background-color: #70A103;
 }
 .tab_title_area li button {
   width: 100%;
@@ -1294,7 +1327,8 @@ body {
   width: 100%;
   height: 100%;
 }
-.tab_content_title {
+.tab_content_area .tab_con {
+  display: none;
   position: absolute;
   top: 30%;
   left: 10%;
@@ -1303,16 +1337,16 @@ body {
   height: auto;
   color: #fff;
 }
-.tab_content_title h3 {
+.tab_content_area .tab_con h3 {
   font-size: 36px;
   margin-bottom: 7px;
 }
-.tab_content_title h4 {
+.tab_content_area .tab_con h4 {
   font-size: 28px;
   font-weight: 400;
   margin-bottom: 90px;
 }
-.tab_content_title p {
+.tab_content_area .tab_con p {
   font-size: 12px;
   font-weight: 100;
   letter-spacing: 1px;
