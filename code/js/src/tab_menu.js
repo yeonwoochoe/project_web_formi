@@ -25,7 +25,7 @@ const eltitleArr = [].slice.call(eltitleList);
 
 
 const elTabContentArea = elBrandWrap.querySelector('.tab_content_area');
-const elcontentPart = elTabContentArea.querySelectorAll('.tab_con');
+const elcontentPart = elTabContentArea.querySelectorAll('.tab_conbox');
 let indexCheck = 0;
 const optionName = 'action';
 
