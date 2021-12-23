@@ -1207,7 +1207,7 @@ body {
     flex-direction: column;
     width: 50%;
     height: 360px;
-    padding: 5px;
+    padding: 8px;
   }
 }
 .tab_mo_title {
@@ -1281,7 +1281,7 @@ body {
   line-height: 72px;
 }
 .tab_title_area li.action {
-  border-bottom: 7px solid #567e00;
+  border-bottom: 7px solid #70A103;
 }
 .tab_title_area li:hover {
   background-color: #70A103;
@@ -1326,27 +1326,47 @@ body {
   position: relative;
   width: 100%;
   height: 100%;
+  background-color: #fdf;
 }
-.tab_content_area .tab_con {
+.tab_content_area .tab_conbox {
   display: none;
+  width: 100%;
+  height: 100%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: -60%;
+}
+.tab_content_area .tab_conbox:nth-child(1) {
+  background-image: url(../../../img/thumbnail/largeBox_01.jpg);
+}
+.tab_content_area .tab_conbox:nth-child(2) {
+  background-image: url(../../../img/thumbnail/largeBox_02.jpg);
+}
+.tab_content_area .tab_conbox:nth-child(3) {
+  background-image: url(../../../img/thumbnail/largeBox_03.jpg);
+}
+.tab_content_area .tab_conbox .tab_content {
+  color: #fff;
   position: absolute;
   top: 30%;
   left: 10%;
   z-index: 10;
-  width: auto;
-  height: auto;
-  color: #fff;
 }
-.tab_content_area .tab_con h3 {
+@media all and (max-width: 1199px) {
+  .tab_content_area .tab_conbox .tab_content {
+    display: none;
+  }
+}
+.tab_content_area .tab_conbox .tab_content h3 {
   font-size: 36px;
   margin-bottom: 7px;
 }
-.tab_content_area .tab_con h4 {
+.tab_content_area .tab_conbox .tab_content h4 {
   font-size: 28px;
   font-weight: 400;
   margin-bottom: 90px;
 }
-.tab_content_area .tab_con p {
+.tab_content_area .tab_conbox .tab_content p {
   font-size: 12px;
   font-weight: 100;
   letter-spacing: 1px;
@@ -1361,45 +1381,10 @@ body {
   .tab_content_area {
     width: 50%;
     height: 360px;
-    background-color: #fdf;
-    margin-left: 10px;
   }
 }
 .tab_content_area > div.action {
   display: block;
-}
-.tab_content_area .tab_con_detail_01 {
-  display: none;
-  width: 100%;
-  height: 100%;
-  display: block;
-  width: 100%;
-  height: 100%;
-  background-image: url(../../img/thumbnail/largeBox_02.jpg);
-  background-repeat: no-repeat;
-  background-position: 50% 50%;
-  background-size: cover;
-}
-.tab_content_area .tab_con_detail_01 > span {
-  display: block;
-  position: absolute;
-  z-index: -1;
-  clip: rect(0 0 0 0);
-  width: 0;
-  height: 0;
-  overflow: hidden;
-}
-.tab_content_area .tab_con_detail_02 {
-  display: none;
-  width: 100%;
-  height: 100%;
-  background-color: #040;
-}
-.tab_content_area .tab_con_detail_03 {
-  display: none;
-  width: 100%;
-  height: 100%;
-  background-color: #040;
 }
 
 #rivewPdBox {
