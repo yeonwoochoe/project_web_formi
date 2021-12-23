@@ -11,7 +11,7 @@ $imgPath:'../../img/';
   }
 
   @at-root .indi_container {
-    position: absolute; bottom: 30px; left: 50%; z-index: 100;
+    position: absolute; bottom: 30px; left: 50%; z-index: 500;
     width: 100%; height: auto; padding: 5px;
     transform: translateX(-50%);
     background-color: #555; 
@@ -48,7 +48,7 @@ $imgPath:'../../img/';
 
 @at-root .view_btn {
   position: absolute; top: 50%; margin-top: -70px;
-  left: 0; z-index: 500; width: 100%; height: 0;
+  left: 0; z-index: 200; width: 100%; height: 0;
   & > button { 
     background-color: #999; 
     &.next { float: right;
@@ -79,28 +79,24 @@ $imgPath:'../../img/';
     height: 100%;
     & > div {display: none; position: absolute;
       top: 0; left: 0; width: 100%;height: 100%;
-    &.action{  display: block;
-      z-index: 5;
+    &.act{  display: block;
+      z-index: 100;
 
       }
     }
   }
 
   .slide_01 {
-    background-color: #4b97;
+    background-color: #894;
   }
   .slide_02 {
-    background-color: #73f7;
+    background-color: #fd0;
   }
   .slide_03 {
-    background-color: #6637;
+    background-color: #05f;
   }
   .slide_04 {
-    background-color: #5af7;
+    background-color: #0f0;
   }
-  .slide_05 {
-    background-color: #e067;
-  }
-  
 
 }
