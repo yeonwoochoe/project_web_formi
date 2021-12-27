@@ -340,8 +340,8 @@ h1 > a > span {
   .mo_search_form_box {
     display: block;
     position: absolute;
-    top: 85%;
-    width: 260px;
+    top: 90%;
+    width: 280px;
     height: 40px;
     padding: 5px 8px;
     border-bottom: 2px solid #171717;
@@ -498,7 +498,7 @@ fieldset {
   float: right;
   width: 28px;
   height: 28px;
-  background-image: url(../../img/Search_icon.png);
+  background-image: url(../../img/Search_icon.svg);
   background-repeat: no-repeat;
   background-position: 50% 50%;
   background-size: initial;
