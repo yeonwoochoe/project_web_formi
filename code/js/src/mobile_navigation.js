@@ -16,9 +16,8 @@ const elMoNavInner = document.querySelector('.mo_btn_wrap');
 const elNavClose = elMoNavInner.querySelector('.nav_close');
 
 
-// 이벤트 활성화 클래스 문자열
+// 이벤트 활성화 클래스
 const ckBtnOn = 'on';
-
 
 
 // 이벤트 --------------------------------------------------------

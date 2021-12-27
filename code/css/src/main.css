@@ -375,8 +375,8 @@ h1 > a > span {
   .mo_search_form_box {
     display: block;
     position: absolute;
-    top: 70%;
-    left: 8%;
+    top: 80%;
+    left: 2%;
     width: 280px;
     height: 40px;
     padding: 5px 8px;
