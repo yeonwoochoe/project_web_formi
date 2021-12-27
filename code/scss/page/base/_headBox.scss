@@ -127,7 +127,28 @@ $imgPath:'../../img/';
 
   @at-root .mid_navigation  {
     width: auto; height: 30px; margin: 0;
-  @at-root .mo_search_form_box {display: none;}
+
+  @at-root .mo_search_form_box {display: flex; align-items: center; 
+    justify-content: center;
+   position: absolute; top: calc(100% + 1px);
+   right: 0; left: 0;
+   width: 100%; height: 180px;margin: auto;
+   border-bottom: 0.0625rem solid #ccc;
+   background-color: #fff;
+    @include tablet {
+      fieldset {display: flex; padding: 0.5rem 1.5rem;
+        align-items: center;  width: 600px; height: 70px; margin: auto; 
+        background-color: #eee; border-radius: 10px;}
+      .sch_inner_wrap { width: 100%;  height: 100%;
+        & > input {width: calc(100% - 28px);height: 100%; font-size: 1.1rem;;}
+      }
+      .sch_inner_btn_wrap  { background-size: contain; }
+    
+    }
+  }
+  //pc,labtop html 에서 제거
+
+
     @at-root .mo_btn_wrap { display: none;
 
      @include mobile {display: flex;  width: 100%;
@@ -155,7 +176,7 @@ $imgPath:'../../img/';
     
   
    @at-root .mo_search_form_box {display: block;
-    position: absolute; top: 90%; 
+    position: absolute; top: 70%;    left: 8%;
     width: 280px; height: 40px; 
    padding: 5px 8px; border-bottom: 2px solid $color_black_02;
    background-color: $color_white;
@@ -251,12 +272,12 @@ $imgPath:'../../img/';
       float: right;  width: 300px; height: 40px;
       margin-top: 15px; padding: 5px 8px; border: 1px solid #ddd;
       border-radius: 5px; background-color: $color_white;
-      @include handhelds {display: none;}
+      // @include handhelds {display: none;} //html에서 제거
   
 
       @at-root .sch_inner_wrap {   display: inline-block;
         height: 20px; margin: 0; width: 200px;height: 100%;
-        & > input {width: 240px; height: 30px;
+        & > input {width: 230px; height: 30px;
         background-color: transparent;}
       }
       @at-root fieldset {width: 100%; height: 100%;}
