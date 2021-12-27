@@ -20,10 +20,10 @@ $imgPath:'../../img/';
         display: inline-block; width: 30px; height: 30px; 
         margin-right: 20px; background-color: #fdf; border-radius: 3.125rem;
         &:last-child {margin-right: 0;}
-        &.act > a {background-color: #f9f; transform: scale(1.1);}
+        &.act > a {background-color: $color_primary_01; transform: scale(1.1);}
         @at-root .indicator a {
           @include full;
-          background-color: #999; border-radius: 100%; }
+          background-color: nth($color_gray, 2);; border-radius: 100%; }
     }
  
     @include pc {display: none;}
