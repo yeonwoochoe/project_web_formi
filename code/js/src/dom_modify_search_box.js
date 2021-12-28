@@ -12,7 +12,7 @@
   const elMidheader = elMidheaderWrap.querySelector('#mid_header');
   const elMoNavContainer = elMidheaderWrap.querySelector('.mo_nav_container');
  
-
+  const elNavBg = elMoNavContainer.querySelector('.nav_bg')
   const elSearchPc = elMidheader.querySelector('.search_form_box');
   const elSearchMob = elMoNavContainer.querySelector('.mo_search_form_box');  
   
@@ -27,6 +27,7 @@
     if (browserW) {
       elSearchPc.remove();
       elMoNavContainer.append(elSearchMob);
+      elSearchMob.after(elNavBg);
     } else {
       elSearchMob.remove();
       elMidheader.append(elSearchPc);

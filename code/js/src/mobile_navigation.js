@@ -4,7 +4,7 @@
 
 // =============================================================
 // 시나리오.
-//  1. 네비게이션 버튼 동작 : .gnb_title 클릭하면 .on 삽입
+//  1. 네비게이션 버튼 동작 : .elMidNaviBtn 클릭하면 .on 삽입
 //  2. 네비 안의 x버튼 동작 : .nav_close 클릭하면 .on 제거
 // =============================================================
 
@@ -14,7 +14,6 @@ const elMidNaviBtn = elMidNaviBtnBox.querySelector('.mid_navi_btn > button');
 const elMoNavOpenBtn = document.querySelector('.mo_nav_container');
 const elMoNavInner = document.querySelector('.mo_btn_wrap');
 const elNavClose = elMoNavInner.querySelector('.nav_close');
-
 
 // 이벤트 활성화 클래스
 const ckBtnOn = 'on';
