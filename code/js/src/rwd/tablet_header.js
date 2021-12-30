@@ -18,28 +18,53 @@ const elSearchIcon = elNavBtnWrap.querySelector('.unb_area > button');
 const elMoNavContainer = document.querySelector('.nav_container');
 const elSearchBox = elMoNavContainer.querySelector('.mo_search_form_box');
 const elViewBox = document.querySelector('#viewBox');
+const elLoginBox = document.querySelector('#loginBox');
+const elSearchFormBox = document.querySelector('#searchFormBox');
 
-//반응형
-
-//   const setDevice = [
-//     {type:'mobile', size:320},
-//     {type:'tablet', size:768},
- 
-//   ];
-
-// const deviceSize = `screen and (max-width:768px)`;
-// const mediaQuery = window.matchMedia(deviceSize);
-
+console.log(elLoginBox);
 
 //기본 추가 기능
 const opActive = 'open';
 
 
-// 외부 영역(#viewBox) 클릭시 .mo_search_form_box에 .open 제거
-elViewBox.addEventListener('click', function(e){
-  e.preventDefault();
-  elSearchBox.classList.remove(opActive);
-});
+// // 외부 영역(#viewBox) 클릭시 .mo_search_form_box에 .open 제거
+// elViewBox.addEventListener('click', function(e){
+//   e.preventDefault();
+//   elSearchBox.classList.remove(opActive);
+// });
+
+// // 외부 영역(#viewBox) 클릭시 .mo_search_form_box에 .open 제거
+// elLoginBox.addEventListener('click', function(e){
+//   e.preventDefault();
+//   elSearchBox.classList.remove(opActive);
+// });
+
+
+
+//외부영역 선택 제거 함수 이벤트처리
+const fnCkArea = () => {
+  if (elViewBox) {
+    elViewBox.addEventListener('click', function(e){
+    e.preventDefault();
+    elSearchBox.classList.remove(opActive);
+    });
+  } 
+  else if(elLoginBox){
+    elLoginBox.addEventListener('click', function(e){
+    e.preventDefault();
+    elSearchBox.classList.remove(opActive);; 
+    })
+  }
+  else{
+    elSearchFormBox.addEventListener('click', function(e){
+    e.preventDefault();
+    elSearchBox.classList.remove(opActive);; 
+    })
+  }
+}
+fnCkArea();
+
+
 
 
 //함수& 이벤트처리
@@ -56,6 +81,8 @@ const fnCkWidth = () => {
   } else {
     elSearchBox.classList.remove(opActive);
   }
+
+
 }
 
 fnCkWidth();
