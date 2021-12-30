@@ -51,13 +51,11 @@ const fnCkArea = () => {
   } 
   else if(elLoginBox){
     elLoginBox.addEventListener('click', function(e){
-    e.preventDefault();
     elSearchBox.classList.remove(opActive);; 
     })
   }
   else{
     elSearchFormBox.addEventListener('click', function(e){
-    e.preventDefault();
     elSearchBox.classList.remove(opActive);; 
     })
   }
