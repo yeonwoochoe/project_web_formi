@@ -10,10 +10,10 @@
 
   const fnScript = ()=>{
     const mkScript = document.createElement('script');
-    mkScript.setAttribute('src','/js./src/rwd_import_header.js');
+    mkScript.setAttribute('src','/js/src/rwd_import_header.js');
     elBody.append(mkScript);
   };
-
+  
   fetch(path+headerData)
     .then( response => response.text() )
     .then( (element) =>{
