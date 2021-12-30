@@ -3,299 +3,184 @@
 $imgPath:'../../img/';
 
 
-.head_wrapper {
-  position: fixed; top: 0; left: 0;
-  width: 100%; border-bottom: 1px solid #ddd;
-  z-index: 1000;
-  
+.head_wrapper { position: fixed; top: 0; left: 0; z-index: 1000;
+width: 100%; height: auto; border-bottom: 1px solid #ddd; }
 
-@at-root #headBox {
-  position: relative; width: 100%; height: 100px;
-  box-sizing: content-box; 
 
+#headBox {position: relative; width: 100%; height: 100px; padding-top: 50px; 
+box-sizing: content-box; 
   @include handhelds 
-  { width: 100%; height: 60px; margin: auto; 
-    background-color: $color_white; box-sizing: content-box; }
-  @include laptop { padding-top: 50px;}
-  @include pc { padding-top: 50px;}
+  {width: 100%; height: 60px; margin: auto; padding: 0;
+  background-color: $color_white; box-sizing: content-box; }
+} //#headBox
 
 
-  @at-root h1 {
-    float: left;  width: 180px; height: 64px; 
-  
-    @include handhelds{
-      width: 100px; height: 40px; 
-      position:absolute; left:0; right:0; top:10px; margin:auto;}
 
+
+.navigation{ width:100%; height: auto; } //.navigation
+
+//mobile&tablet 버튼 영역--------------------------------------------------------
+.mid_navi_btnBox {
+  display: flex; justify-content: space-between; align-items: center;
+  width: 100%; height: 60px; padding: 10px;
+.mid_navi_btn {display: block; width: 36px; height: 36px; background-color: #fdf;
+  @include mobile{
+  button {@include full ($file:'m_navigation.svg',$size:contain)}
+  }
+  @include tablet{
+  button {@include full ($file:'m_account_user.svg',$size:contain)}
+  }
+}//.mid_navi_btn 
+
+.mid_mo_navi_btn {display: flex;
+  @at-root .unb_area {
+      display: block; width: 32px; height: 32px; margin-left: 10px; background-color: #fdf;
+      @include tablet {
+      button {@include full ($file:'m_search.svg',$size:contain)}
+      }
+      @include mobile{
+      button {@include full ($file:'m_account_user.svg',$size:contain)}
+      }
+    }//unb_area
+
+  .shopping_area {
+      display: block; width: 32px; height: 32px;  margin-left: 10px;
+      background-color: #fdf; 
+      button { @include full ($file:'m_shopping-bag.svg',$size:contain)}
+    }
+  }//mid_mo_navi_btn
+}//.mid_navi_btnBox -----------------------------------------------------------------------
+
+
+.midheader_wrap {width: 100%; height: 100%; margin: auto;}
+  #mid_header{ display: flex; justify-content: space-between; align-items: flex-end;
+  width: 100%; height: 100px; padding: 20px 40px 20px 70px;
+  box-sizing: border-box; background-color: rgba(255, 255, 255, 0.845);
+  @include mobile { width: 0; height: 0;  padding: 0; 
+    box-sizing: border-box; clip:rect(0 0 0 0); overflow: hidden; }
+  @include tablet {justify-content: space-evenly; height: 50px; 
+  padding: 0; background-color: rgba(239, 239, 239, 0.838);}
+}//#mid_header
+
+  h1 {float: left;  width: 180px; height: 64px; 
+  @include handhelds{ position:absolute; left:0; right:0; top:10px; 
+    width: 100px; height: 40px;  margin:auto;}
     & > a { 
-    @include full('logo.png',$size:contain){
-      @include handhelds{ background-image: url(#{$imgPath}+'logo.png'); }
-        };
-      } //& > a
-    }// h1
+      @include full('logo.png',$size:contain){
+      @include handhelds{ background-image: url(#{$imgPath}+'logo.png');}
+      };
+    } //& > a
+  }// h1
 
+  .mid_navigation  {width: auto; height: 30px; margin: 0;
 
-
-  @at-root .navigation{
-    
-    @at-root .mid_navi_btnBox {
-        display: none;
-        @include handhelds {width: 100%; height: 60px; 
-          display: flex; justify-content: space-between; align-items: center; padding: 10px;}
-
-      .mid_navi_btn {
-        display: block;
-        width: 36px; height: 36px; background-color: #fdf;
-        @include laptop {display: none;}
-        @include pc {display: none;}
-        @include mobile{
-            button {
-                @include full ($file:'m_navigation.svg',$size:contain)
-          }
-        }
-
-        @include tablet{
-          button {
-              @include full ($file:'m_account_user.svg',$size:contain)
-        }
-      }
-
-
-
-
-
-
-      }//.mid_navi_btn 
-
-
-      .mid_mo_navi_btn {display: flex;   }
-      .search_area {
-        @include handhelds{
-          display: block;
-          width: 32px; height: 32px; background-color: #fdf;
-          margin-left: 10px;
-          @include tablet {
-          button { 
-            @include full ($file:'m_search.svg',$size:contain)}
-        }}
-      
-              @include mobile{
-            button {
-                @include full ($file:'m_account_user.svg',$size:contain)}
-        }
-      
-      }
-
-
-
-
-
-      .shopping_area {
-        @include handhelds{
-          display: block;
-          width: 32px; height: 32px; background-color: #fdf;
-          margin-left: 10px;
-          
-          button {
-            @include full ($file:'m_shopping-bag.svg',$size:contain)
-          }
-        }
-      }
-    }//.btnBox 
-
-
-@at-root .midheader_wrap {
-    width: 100%; height: 100%; 
-    margin: auto;
-
-@at-root #mid_header{
-  display: flex; justify-content: space-between; align-items: flex-end;
-  width: 100%; height: 100px;
-  padding: 20px 40px 20px 70px;
-  box-sizing: border-box;
-  background-color: rgba(255, 255, 255, 0.845);
-      @include mobile {    width: 100%; height: 100%; padding: 0;
-        box-sizing: border-box; }
-
-      @include tablet {justify-content: space-evenly;
-         height: 50px; padding: 0; background-color: rgba(239, 239, 239, 0.838);}
-
-
-
-    }//#mid_header '
-  
-
-  @at-root .mid_navigation  {
-    width: auto; height: 30px; margin: 0;
-
-    @include tablet {
-    @at-root .mo_search_form_box {display: none; align-items: center; 
-    justify-content: center; position: absolute; top: calc(100% + 1px);
-    right: 0; left: 0; width: 100%; height: 180px;margin: auto;
-    border-bottom: 0.0625rem solid #ccc;
-    background-color: #fff;
-      &.open {display: flex;}
-
-      fieldset {display: flex; padding: 0.5rem 1.5rem;
-        align-items: center;  width: 600px; height: 70px; margin: auto; 
-        background-color: #eee; border-radius: 10px;}
-      .sch_inner_wrap { width: 100%;  height: 100%;
-        & > input {width: calc(100% - 28px);height: 100%; font-size: 1.1rem;;}
-      }
-      .sch_inner_btn_wrap  { background-size: contain; }
-    
+    @at-root .nav_container{ width: 100%; height: auto;
+    & .gnb { width: auto; height: 100%; 
+      & > li {
+      float: left; width: auto; height: 100%; margin-left: 30px;
+      box-sizing: border-box; color: #444; text-align: center;
+      @include tablet {margin-right: 50px; margin-left: 0;
+        &:last-child {margin-right: 0;}}
+    } //li
+  }//.gnb 
+  @at-root .search_form_box {
+    float: right;  width: 300px; height: 40px;
+    margin-top: 15px; padding: 5px 8px; border: 1px solid #ddd;
+    border-radius: 5px; background-color: $color_white;
+    @at-root .sch_inner_wrap {   display: inline-block;
+      height: 20px; margin: 0; width: 200px;height: 100%;
+      & > input {width: 230px; height: 30px;
+      background-color: transparent;}
     }
-  }
-  //pc,labtop html 에서 제거
+    @at-root fieldset {width: 100%; height: 100%;}
+    @at-root .sch_inner_btn_wrap  {float: right;width: 28px; height: 28px;
+      background-image: url(../../img/Search_icon.svg);
+      background-repeat: no-repeat;
+      background-position: 50% 50%;
+      background-size: initial; }
+  }//.search_form_box 
+
+}// pc,labtop nav환경   
 
 
-    @at-root .mo_btn_wrap { display: none;
+  @include mobile{
+    @at-root .nav_container{ display: none;
+    &.on {display: flex; flex-direction: column; align-items: flex-start;
+      position: fixed; top: 0; left: 0; right: 0;  bottom: 0; z-index: 2000;
+      min-height: 900px; padding:32px;
+      background-color: rgba(23, 23, 23, 0.5); }
 
-     @include mobile {display: flex;  width: 100%;
+      .mo_btn_wrap {display: flex;  width: 100%;
       justify-content: space-between; margin-bottom: 30px;
-    
-     @at-root .nav_logo {
-      width: 110px; height:50px;
-      & > a {  @include full ($file:'logo.png',$size:contain); 
+      @at-root .nav_logo {width: 110px; height:50px;
+      & > a { @include full ($file:'logo.png',$size:contain); 
         &:focus { outline: 0.25rem solid $color_black_02; }
-      }
-    }
-    
-    @at-root #mid_header {@include mobile 
-    {width: 0; height: 0;   clip:rect(0 0 0 0); overflow: hidden; 
-    }}
-
-
-    @at-root .nav_close {
-      width: 50px; height: 50px; 
-
+        }
+      }//nav_logo
+      @at-root .nav_close {width: 50px; height: 50px; 
       & button { @include full; font-size: 1.5rem;
-        &:focus { outline: 0.25rem solid $color_black_02; }}
-     
-    }
-    
-  
-   @at-root .mo_search_form_box {display: block;
-    position: fixed; top: 570px; left: 8%;
-    width: 280px; height: 40px; 
-   padding: 5px 8px; border-bottom: 2px solid $color_black_02;
-   background-color: $color_white;
+          &:focus { outline: 0.25rem solid $color_black_02; }} 
+        }//nav_close
+      @at-root .mo_search_form_box {display: block;
+        position: fixed; top: 570px; left: 8%;
+        width: 280px; height: 40px; 
+        padding: 5px 8px; border-bottom: 2px solid $color_black_02;
+        background-color: $color_white;}
+  }//mo_btn_wrap
+
+    .gnb {width: 100%; display: flex; flex-direction: column;
+    height:auto; background-color: $color_white;
+    & li {height:auto; min-height:40px; padding:15px; 
+    text-align: left; line-height: 40px; margin-left: 0;
+    border-bottom: 1px solid nth($color_gray, 1); margin-right: 0;
+    & > a {
+    display: block; width:100%; min-height:40px; color: nth($color_black, 1); 
+    font-size: map-get($font_size, content3); font-weight: 700;   }
+
+    @at-root .gnb > li a:after {content: "";
+    position: absolute;  left:90%; display: block; width: 30px; height: 30px;
+    transform: translateY(-134%);
+    background-image: url(../../../img/chevron-next.svg);
+    background-size: contain;
+    background-position: 50% 50%;
+    background-repeat: no-repeat;}
+     }
+    } //gnb 
+
+  }//.nav_container
+  @at-root .nav_bg {display: block;
+  position: fixed; top: 0; left: 3%; right: 0; bottom: 0; z-index :-15;
+  width: 100%; height: 100%; background-color: $color_white;}
+
+
+
+
+
+
+} //mobile nav환경         
+
+
+ 
+  @include tablet {
+  @at-root .mo_search_form_box {display: none; align-items: center; 
+  justify-content: center; position: absolute; top: calc(100% + 1px);
+  right: 0; left: 0; width: 100%; height: 180px;margin: auto;
+  border-bottom: 0.0625rem solid #ccc; background-color: #fff;
+    &.open {display: flex;}
+
+  fieldset {display: flex;  width: 600px; height: 70px; margin: auto;  
+  padding: 0.5rem 1.5rem; align-items: center; 
+  background-color: #eee; border-radius: 10px;}
+  .sch_inner_wrap { width: 100%;  height: 100%;
+  & > input {width: calc(100% - 28px);height: 100%; font-size: 1.1rem;;}
+  }
+  .sch_inner_btn_wrap  { background-size: contain; }
   }
 
-  }//mobile
-
-}//mo_btn_wrap
+  }//tablet nav 써치박스환경         
 
 
-}
-@at-root .nav_bg_wrap {width: 100%; height: 100%; display: flex;}
-
-@at-root .mo_nav_container{
-@include mobile { display: none;
-  &.on {display: flex;
-    min-height: 900px;
-    flex-direction: column;
-    align-items: flex-start;
-    padding:32px;
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    z-index: 2000;
-    background-color: rgba(23, 23, 23, 0.5); }}
-  
-  
-  
- 
-      & .gnb {  width: auto; height: 100%; 
-        // @include mobile { display: flex; width: auto; height: auto;}
-        & > li {  float: left; width: auto; height: 100%; margin-left: 30px;
-          box-sizing: border-box; color: #444; text-align: center;
-          @include tablet {margin-right: 50px; margin-left: 0;
-            &:last-child {margin-right: 0;}
-          }
-          @include mobile{position: relative;
-             margin-right:16px; 
-            color:nth($color_black, 1);; font-weight:600;}
-        } //li
-      }//.gnb 
-  
-
-   
-  
-
-    @include mobile{
-      
-    .gnb {width: 100%; display: flex;
-      flex-direction: column; height:auto; background-color: $color_white;
-      & > li {height:auto; min-height:40px;  
-      
-        padding:15px; text-align: left; line-height: 40px; margin-left: 0;
-        border-bottom: 1px solid nth($color_gray, 1); margin-right: 0;
-        & > a {display: block; width:100%; min-height:40px; color: nth($color_black, 1); font-size: map-get($font_size, content3);
-        font-weight: 700;
-          @at-root .gnb > li a:after {
-            content: "";
-          position: absolute; 
-          left:90%;
-          display: block;
-          width: 30px;
-          height: 30px;
-          transform: translateY(-134%);
-          background-image: url(../../../img/chevron-next.svg);
-          background-size: contain;
-          background-position: 50% 50%;
-          background-repeat: no-repeat;}
-      
-      }
-      }   
-    }
-  }              
-  
-  @at-root .nav_bg { display: none;
-    @include mobile {
-      display: block;
-       position: fixed; top: 0; left: 3%; right: 0; bottom: 0; z-index :-15;
-     width: 100%; height: 100%; background-color: $color_white;
-     
-     }
-   }
-
-    }//mid_navigation 
-
-
-
-    
-    @at-root .search_form_box {
-      
-      float: right;  width: 300px; height: 40px;
-      margin-top: 15px; padding: 5px 8px; border: 1px solid #ddd;
-      border-radius: 5px; background-color: $color_white;
-      // @include handhelds {display: none;} //html에서 제거
-  
-
-      @at-root .sch_inner_wrap {   display: inline-block;
-        height: 20px; margin: 0; width: 200px;height: 100%;
-        & > input {width: 230px; height: 30px;
-        background-color: transparent;}
-      }
-      @at-root fieldset {width: 100%; height: 100%;}
-      @at-root .sch_inner_btn_wrap  {  float: right;
-        width: 28px; height: 28px;
-        background-image: url(../../img/Search_icon.svg);
-        background-repeat: no-repeat;
-        background-position: 50% 50%;
-        background-size: initial; }
-
-    
-    }//.search_form_box 
-
-
-
-
-  }//.midheader_wrap
-  
+}//.mid_navigation
 
 
 
@@ -304,41 +189,23 @@ $imgPath:'../../img/';
     width: 100%; height: 50px; padding: 10px 70px;
     box-sizing: border-box; border-bottom: 1px solid #ddd;
     background-color: rgb(226, 226, 226);
-    @include handhelds {display: none;}
 
-    @at-root .top_nav_wrap{
-      position: relative; margin: 0 auto;
-      width: 100%; height: auto;}
-    
-      @at-root .support_unb {  float: left;
-        width: 430px;
-        height: 30px;}
-      @at-root .support_area {  width: 100%; height: 100%;
-        & li {  float: left; width: auto; height: 100%;
-          margin-right: 20px; box-sizing: border-box;
-          text-align: center;  text-transform: uppercase;
-          line-height: 30px;}
-      }
-
-      @at-root .user_nav  {   float: right;
-        width: 310px; height: 30px;}
-
-      @at-root .user_area  {  width: 100%; height: 100%;
-        & li {  width: auto;
-          height: 100%;
-          line-height: 30px;
-          float: left;
-          margin-left: 20px;
-          box-sizing: border-box;
-          text-align: center;}
-      
-      }
+    .top_nav_wrap{position: relative; margin: 0 auto; width: 100%; height: auto;}
+    .support_unb {  float: left; width: 430px; height: 30px;}
+    .support_area {  width: 100%; height: 100%;
+    & li {  float: left; width: auto; height: 100%;
+      margin-right: 20px; box-sizing: border-box;
+      text-align: center;  text-transform: uppercase; line-height: 30px;}
+    }
+    .user_nav  {float: right; width: 310px; height: 30px;}
+    .user_area {width: 100%; height: 100%;
+    & li { float: left; width: auto; height: 100%; 
+      margin-left: 20px;line-height: 30px;
+      box-sizing: border-box;text-align: center;}
+    }
   }//#top_navigation
 
 
 
 
 
-    } //.navigation
-  } //#headBox
-}//.head_wrapper 

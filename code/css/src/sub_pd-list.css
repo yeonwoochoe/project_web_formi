@@ -18,14 +18,17 @@
   position: fixed;
   top: 0;
   left: 0;
-  width: 100%;
-  border-bottom: 1px solid #ddd;
   z-index: 1000;
+  width: 100%;
+  height: auto;
+  border-bottom: 1px solid #ddd;
 }
+
 #headBox {
   position: relative;
   width: 100%;
   height: 100px;
+  padding-top: 50px;
   box-sizing: content-box;
 }
 @media all and (max-width: 1199px) {
@@ -33,88 +36,30 @@
     width: 100%;
     height: 60px;
     margin: auto;
+    padding: 0;
     background-color: #fff;
     box-sizing: content-box;
   }
 }
-@media all and (min-width: 1200px) and (max-width: 1439px) {
-  #headBox {
-    padding-top: 50px;
-  }
-}
-@media all and (min-width: 1440px) {
-  #headBox {
-    padding-top: 50px;
-  }
-}
-h1 {
-  float: left;
-  width: 180px;
-  height: 64px;
-}
-@media all and (max-width: 1199px) {
-  h1 {
-    width: 100px;
-    height: 40px;
-    position: absolute;
-    left: 0;
-    right: 0;
-    top: 10px;
-    margin: auto;
-  }
-}
-h1 > a {
-  display: block;
+
+.navigation {
   width: 100%;
-  height: 100%;
-  background-image: url(../../img/logo.png);
-  background-repeat: no-repeat;
-  background-position: 50% 50%;
-  background-size: contain;
-}
-h1 > a > span {
-  display: block;
-  position: absolute;
-  z-index: -1;
-  clip: rect(0 0 0 0);
-  width: 0;
-  height: 0;
-  overflow: hidden;
-}
-@media all and (max-width: 1199px) {
-  h1 > a {
-    background-image: url(../../img/logo.png);
-  }
+  height: auto;
 }
 
 .mid_navi_btnBox {
-  display: none;
-}
-@media all and (max-width: 1199px) {
-  .mid_navi_btnBox {
-    width: 100%;
-    height: 60px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 10px;
-  }
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  height: 60px;
+  padding: 10px;
 }
 .mid_navi_btnBox .mid_navi_btn {
   display: block;
   width: 36px;
   height: 36px;
   background-color: #fdf;
-}
-@media all and (min-width: 1200px) and (max-width: 1439px) {
-  .mid_navi_btnBox .mid_navi_btn {
-    display: none;
-  }
-}
-@media all and (min-width: 1440px) {
-  .mid_navi_btnBox .mid_navi_btn {
-    display: none;
-  }
 }
 @media all and (max-width: 767px) {
   .mid_navi_btnBox .mid_navi_btn button {
@@ -159,17 +104,15 @@ h1 > a > span {
 .mid_navi_btnBox .mid_mo_navi_btn {
   display: flex;
 }
-@media all and (max-width: 1199px) {
-  .mid_navi_btnBox .search_area {
-    display: block;
-    width: 32px;
-    height: 32px;
-    background-color: #fdf;
-    margin-left: 10px;
-  }
+.unb_area {
+  display: block;
+  width: 32px;
+  height: 32px;
+  margin-left: 10px;
+  background-color: #fdf;
 }
-@media all and (max-width: 1199px) and (min-width: 768px) and (max-width: 1199px) {
-  .mid_navi_btnBox .search_area button {
+@media all and (min-width: 768px) and (max-width: 1199px) {
+  .unb_area button {
     display: block;
     width: 100%;
     height: 100%;
@@ -178,7 +121,7 @@ h1 > a > span {
     background-position: 50% 50%;
     background-size: contain;
   }
-  .mid_navi_btnBox .search_area button > span {
+  .unb_area button > span {
     display: block;
     position: absolute;
     z-index: -1;
@@ -189,7 +132,7 @@ h1 > a > span {
   }
 }
 @media all and (max-width: 767px) {
-  .mid_navi_btnBox .search_area button {
+  .unb_area button {
     display: block;
     width: 100%;
     height: 100%;
@@ -198,34 +141,7 @@ h1 > a > span {
     background-position: 50% 50%;
     background-size: contain;
   }
-  .mid_navi_btnBox .search_area button > span {
-    display: block;
-    position: absolute;
-    z-index: -1;
-    clip: rect(0 0 0 0);
-    width: 0;
-    height: 0;
-    overflow: hidden;
-  }
-}
-@media all and (max-width: 1199px) {
-  .mid_navi_btnBox .shopping_area {
-    display: block;
-    width: 32px;
-    height: 32px;
-    background-color: #fdf;
-    margin-left: 10px;
-  }
-  .mid_navi_btnBox .shopping_area button {
-    display: block;
-    width: 100%;
-    height: 100%;
-    background-image: url(../../img/m_shopping-bag.svg);
-    background-repeat: no-repeat;
-    background-position: 50% 50%;
-    background-size: contain;
-  }
-  .mid_navi_btnBox .shopping_area button > span {
+  .unb_area button > span {
     display: block;
     position: absolute;
     z-index: -1;
@@ -236,11 +152,38 @@ h1 > a > span {
   }
 }
 
+.mid_navi_btnBox .mid_mo_navi_btn .shopping_area {
+  display: block;
+  width: 32px;
+  height: 32px;
+  margin-left: 10px;
+  background-color: #fdf;
+}
+.mid_navi_btnBox .mid_mo_navi_btn .shopping_area button {
+  display: block;
+  width: 100%;
+  height: 100%;
+  background-image: url(../../img/m_shopping-bag.svg);
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  background-size: contain;
+}
+.mid_navi_btnBox .mid_mo_navi_btn .shopping_area button > span {
+  display: block;
+  position: absolute;
+  z-index: -1;
+  clip: rect(0 0 0 0);
+  width: 0;
+  height: 0;
+  overflow: hidden;
+}
+
 .midheader_wrap {
   width: 100%;
   height: 100%;
   margin: auto;
 }
+
 #mid_header {
   display: flex;
   justify-content: space-between;
@@ -253,10 +196,12 @@ h1 > a > span {
 }
 @media all and (max-width: 767px) {
   #mid_header {
-    width: 100%;
-    height: 100%;
+    width: 0;
+    height: 0;
     padding: 0;
     box-sizing: border-box;
+    clip: rect(0 0 0 0);
+    overflow: hidden;
   }
 }
 @media all and (min-width: 768px) and (max-width: 1199px) {
@@ -268,155 +213,60 @@ h1 > a > span {
   }
 }
 
+h1 {
+  float: left;
+  width: 180px;
+  height: 64px;
+}
+@media all and (max-width: 1199px) {
+  h1 {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 10px;
+    width: 100px;
+    height: 40px;
+    margin: auto;
+  }
+}
+h1 > a {
+  display: block;
+  width: 100%;
+  height: 100%;
+  background-image: url(../../img/logo.png);
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  background-size: contain;
+}
+h1 > a > span {
+  display: block;
+  position: absolute;
+  z-index: -1;
+  clip: rect(0 0 0 0);
+  width: 0;
+  height: 0;
+  overflow: hidden;
+}
+@media all and (max-width: 1199px) {
+  h1 > a {
+    background-image: url(../../img/logo.png);
+  }
+}
+
 .mid_navigation {
   width: auto;
   height: 30px;
   margin: 0;
 }
-@media all and (min-width: 768px) and (max-width: 1199px) {
-  .mo_search_form_box {
-    display: none;
-    align-items: center;
-    justify-content: center;
-    position: absolute;
-    top: calc(100% + 1px);
-    right: 0;
-    left: 0;
-    width: 100%;
-    height: 180px;
-    margin: auto;
-    border-bottom: 0.0625rem solid #ccc;
-    background-color: #fff;
-  }
-  .mo_search_form_box.open {
-    display: flex;
-  }
-  .mo_search_form_box fieldset {
-    display: flex;
-    padding: 0.5rem 1.5rem;
-    align-items: center;
-    width: 600px;
-    height: 70px;
-    margin: auto;
-    background-color: #eee;
-    border-radius: 10px;
-  }
-  .mo_search_form_box .sch_inner_wrap {
-    width: 100%;
-    height: 100%;
-  }
-  .mo_search_form_box .sch_inner_wrap > input {
-    width: calc(100% - 28px);
-    height: 100%;
-    font-size: 1.1rem;
-  }
-  .mo_search_form_box .sch_inner_btn_wrap {
-    background-size: contain;
-  }
-}
-.mo_btn_wrap {
-  display: none;
-}
-@media all and (max-width: 767px) {
-  .mo_btn_wrap {
-    display: flex;
-    width: 100%;
-    justify-content: space-between;
-    margin-bottom: 30px;
-  }
-  .nav_logo {
-    width: 110px;
-    height: 50px;
-  }
-  .nav_logo > a {
-    display: block;
-    width: 100%;
-    height: 100%;
-    background-image: url(../../img/logo.png);
-    background-repeat: no-repeat;
-    background-position: 50% 50%;
-    background-size: contain;
-  }
-  .nav_logo > a > span {
-    display: block;
-    position: absolute;
-    z-index: -1;
-    clip: rect(0 0 0 0);
-    width: 0;
-    height: 0;
-    overflow: hidden;
-  }
-  .nav_logo > a:focus {
-    outline: 0.25rem solid #171717;
-  }
-}
-@media all and (max-width: 767px) and (max-width: 767px) {
-  #mid_header {
-    width: 0;
-    height: 0;
-    clip: rect(0 0 0 0);
-    overflow: hidden;
-  }
-}
-@media all and (max-width: 767px) {
-  .nav_close {
-    width: 50px;
-    height: 50px;
-  }
-  .nav_close button {
-    display: block;
-    width: 100%;
-    height: 100%;
-    font-size: 1.5rem;
-  }
-  .nav_close button:focus {
-    outline: 0.25rem solid #171717;
-  }
-}
-@media all and (max-width: 767px) {
-  .mo_search_form_box {
-    display: block;
-    position: fixed;
-    top: 570px;
-    left: 8%;
-    width: 280px;
-    height: 40px;
-    padding: 5px 8px;
-    border-bottom: 2px solid #171717;
-    background-color: #fff;
-  }
-}
-
-.nav_bg_wrap {
+.nav_container {
   width: 100%;
-  height: 100%;
-  display: flex;
+  height: auto;
 }
-
-@media all and (max-width: 767px) {
-  .mo_nav_container {
-    display: none;
-  }
-  .mo_nav_container.on {
-    display: flex;
-    min-height: 900px;
-    flex-direction: column;
-    align-items: flex-start;
-    padding: 32px;
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    z-index: 2000;
-    background-color: rgba(23, 23, 23, 0.5);
-  }
-}
-.mo_nav_container .gnb {
+.nav_container .gnb {
   width: auto;
   height: 100%;
 }
-.mo_nav_container .gnb > li {
+.nav_container .gnb > li {
   float: left;
   width: auto;
   height: 100%;
@@ -426,80 +276,14 @@ h1 > a > span {
   text-align: center;
 }
 @media all and (min-width: 768px) and (max-width: 1199px) {
-  .mo_nav_container .gnb > li {
+  .nav_container .gnb > li {
     margin-right: 50px;
     margin-left: 0;
   }
-  .mo_nav_container .gnb > li:last-child {
+  .nav_container .gnb > li:last-child {
     margin-right: 0;
   }
 }
-@media all and (max-width: 767px) {
-  .mo_nav_container .gnb > li {
-    position: relative;
-    margin-right: 16px;
-    color: #333333;
-    font-weight: 600;
-  }
-}
-@media all and (max-width: 767px) {
-  .mo_nav_container .gnb {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    height: auto;
-    background-color: #fff;
-  }
-  .mo_nav_container .gnb > li {
-    height: auto;
-    min-height: 40px;
-    padding: 15px;
-    text-align: left;
-    line-height: 40px;
-    margin-left: 0;
-    border-bottom: 1px solid #F2F2F2;
-    margin-right: 0;
-  }
-  .mo_nav_container .gnb > li > a {
-    display: block;
-    width: 100%;
-    min-height: 40px;
-    color: #333333;
-    font-size: 16px;
-    font-weight: 700;
-  }
-  .gnb > li a:after {
-    content: "";
-    position: absolute;
-    left: 90%;
-    display: block;
-    width: 30px;
-    height: 30px;
-    transform: translateY(-134%);
-    background-image: url(../../../img/chevron-next.svg);
-    background-size: contain;
-    background-position: 50% 50%;
-    background-repeat: no-repeat;
-  }
-}
-.nav_bg {
-  display: none;
-}
-@media all and (max-width: 767px) {
-  .nav_bg {
-    display: block;
-    position: fixed;
-    top: 0;
-    left: 3%;
-    right: 0;
-    bottom: 0;
-    z-index: -15;
-    width: 100%;
-    height: 100%;
-    background-color: #fff;
-  }
-}
-
 .search_form_box {
   float: right;
   width: 300px;
@@ -538,6 +322,176 @@ fieldset {
   background-size: initial;
 }
 
+@media all and (max-width: 767px) {
+  .nav_container {
+    display: none;
+  }
+  .nav_container.on {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 2000;
+    min-height: 900px;
+    padding: 32px;
+    background-color: rgba(23, 23, 23, 0.5);
+  }
+  .nav_container .mo_btn_wrap {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    margin-bottom: 30px;
+  }
+  .nav_logo {
+    width: 110px;
+    height: 50px;
+  }
+  .nav_logo > a {
+    display: block;
+    width: 100%;
+    height: 100%;
+    background-image: url(../../img/logo.png);
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    background-size: contain;
+  }
+  .nav_logo > a > span {
+    display: block;
+    position: absolute;
+    z-index: -1;
+    clip: rect(0 0 0 0);
+    width: 0;
+    height: 0;
+    overflow: hidden;
+  }
+  .nav_logo > a:focus {
+    outline: 0.25rem solid #171717;
+  }
+
+  .nav_close {
+    width: 50px;
+    height: 50px;
+  }
+  .nav_close button {
+    display: block;
+    width: 100%;
+    height: 100%;
+    font-size: 1.5rem;
+  }
+  .nav_close button:focus {
+    outline: 0.25rem solid #171717;
+  }
+
+  .mo_search_form_box {
+    display: block;
+    position: fixed;
+    top: 570px;
+    left: 8%;
+    width: 280px;
+    height: 40px;
+    padding: 5px 8px;
+    border-bottom: 2px solid #171717;
+    background-color: #fff;
+  }
+
+  .nav_container .gnb {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    height: auto;
+    background-color: #fff;
+  }
+  .nav_container .gnb li {
+    height: auto;
+    min-height: 40px;
+    padding: 15px;
+    text-align: left;
+    line-height: 40px;
+    margin-left: 0;
+    border-bottom: 1px solid #F2F2F2;
+    margin-right: 0;
+  }
+  .nav_container .gnb li > a {
+    display: block;
+    width: 100%;
+    min-height: 40px;
+    color: #333333;
+    font-size: 16px;
+    font-weight: 700;
+  }
+  .gnb > li a:after {
+    content: "";
+    position: absolute;
+    left: 90%;
+    display: block;
+    width: 30px;
+    height: 30px;
+    transform: translateY(-134%);
+    background-image: url(../../../img/chevron-next.svg);
+    background-size: contain;
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+  }
+
+  .nav_bg {
+    display: block;
+    position: fixed;
+    top: 0;
+    left: 3%;
+    right: 0;
+    bottom: 0;
+    z-index: -15;
+    width: 100%;
+    height: 100%;
+    background-color: #fff;
+  }
+}
+@media all and (min-width: 768px) and (max-width: 1199px) {
+  .mo_search_form_box {
+    display: none;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: calc(100% + 1px);
+    right: 0;
+    left: 0;
+    width: 100%;
+    height: 180px;
+    margin: auto;
+    border-bottom: 0.0625rem solid #ccc;
+    background-color: #fff;
+  }
+  .mo_search_form_box.open {
+    display: flex;
+  }
+  .mo_search_form_box fieldset {
+    display: flex;
+    width: 600px;
+    height: 70px;
+    margin: auto;
+    padding: 0.5rem 1.5rem;
+    align-items: center;
+    background-color: #eee;
+    border-radius: 10px;
+  }
+  .mo_search_form_box .sch_inner_wrap {
+    width: 100%;
+    height: 100%;
+  }
+  .mo_search_form_box .sch_inner_wrap > input {
+    width: calc(100% - 28px);
+    height: 100%;
+    font-size: 1.1rem;
+  }
+  .mo_search_form_box .sch_inner_btn_wrap {
+    background-size: contain;
+  }
+}
+
 #top_navigation {
   position: absolute;
   top: 0;
@@ -549,29 +503,22 @@ fieldset {
   border-bottom: 1px solid #ddd;
   background-color: #e2e2e2;
 }
-@media all and (max-width: 1199px) {
-  #top_navigation {
-    display: none;
-  }
-}
-.top_nav_wrap {
+#top_navigation .top_nav_wrap {
   position: relative;
   margin: 0 auto;
   width: 100%;
   height: auto;
 }
-
-.support_unb {
+#top_navigation .support_unb {
   float: left;
   width: 430px;
   height: 30px;
 }
-
-.support_area {
+#top_navigation .support_area {
   width: 100%;
   height: 100%;
 }
-.support_area li {
+#top_navigation .support_area li {
   float: left;
   width: auto;
   height: 100%;
@@ -581,23 +528,21 @@ fieldset {
   text-transform: uppercase;
   line-height: 30px;
 }
-
-.user_nav {
+#top_navigation .user_nav {
   float: right;
   width: 310px;
   height: 30px;
 }
-
-.user_area {
+#top_navigation .user_area {
   width: 100%;
   height: 100%;
 }
-.user_area li {
+#top_navigation .user_area li {
+  float: left;
   width: auto;
   height: 100%;
-  line-height: 30px;
-  float: left;
   margin-left: 20px;
+  line-height: 30px;
   box-sizing: border-box;
   text-align: center;
 }
