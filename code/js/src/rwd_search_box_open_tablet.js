@@ -1,1 +1,0 @@
-//rwd_search_box_open_tablet.js
