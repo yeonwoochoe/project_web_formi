@@ -1414,6 +1414,7 @@ body {
   width: 100%;
   height: auto;
   margin: auto;
+  padding-bottom: 40px;
 }
 @media all and (min-width: 1200px) and (max-width: 1439px) {
   .revew_pd_wrap :nth-of-type(4) {
