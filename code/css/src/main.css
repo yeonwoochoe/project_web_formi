@@ -617,10 +617,6 @@ fieldset {
 }
 
 .vmb {
-  position: absolute;
-  top: 58%;
-  left: 20%;
-  z-index: 600;
   width: 200px;
   height: 50px;
 }
@@ -720,6 +716,21 @@ fieldset {
 .slide_con_wrap > div.act {
   display: block;
   z-index: 100;
+}
+.slide_title {
+  width: 900px;
+  height: auto;
+  margin: auto;
+  padding-top: 90px;
+}
+.slide_title > dt {
+  font-size: 36px;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+.slide_title > .sub_title {
+  font-size: 24px;
+  margin-bottom: 40px;
 }
 
 #viewBox .slide_01 {
