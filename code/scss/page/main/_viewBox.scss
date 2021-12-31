@@ -83,6 +83,7 @@ $imgPath:'../../img/';
     }
     @at-root .slide_title 
      {width:900px; height: auto; margin: auto; padding-top: 90px;
+      @include handhelds {display: none;}
       & > dt {
         font-size: map-get($font_size,title3); font-weight: 700;
       margin-bottom: 10px;}

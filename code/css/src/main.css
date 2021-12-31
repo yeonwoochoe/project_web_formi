@@ -723,6 +723,11 @@ fieldset {
   margin: auto;
   padding-top: 90px;
 }
+@media all and (max-width: 1199px) {
+  .slide_title {
+    display: none;
+  }
+}
 .slide_title > dt {
   font-size: 36px;
   font-weight: 700;
