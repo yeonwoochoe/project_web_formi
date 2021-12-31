@@ -3,21 +3,21 @@
 
 {
   const path = './temp/';
-  const headerData = 'rwd_header.html';
+  const footerData = 'footer_area.html';
 
   const elBody = document.querySelector('body');
-  const elHeadWrap = document.querySelector('.head_wrapper');
+  const elFootBox = document.querySelector('#footBox');
 
   const fnScript = ()=>{
     const mkScript = document.createElement('script');
-    mkScript.setAttribute('src','/js/src/rwd_import_header.js');
+    mkScript.setAttribute('src','/js/src/imoport_footer.js');
     elBody.append(mkScript);
   };
   
-  fetch(path+headerData)
+  fetch(path+footerData)
     .then( response => response.text() )
     .then( (element) =>{
-      elHeadWrap.innerHTML = element;
+      elFootBox.innerHTML = element;
     })
     .then(()=>{
       fnScript();
