@@ -1,5 +1,5 @@
-// rwd_header_area.js
-// header 영역 분리하여 불러오기 
+// imoport_footer.js
+// footer 영역 분리하여 불러오기 
 
 {
   const path = './temp/';
@@ -8,9 +8,14 @@
   const elBody = document.querySelector('body');
   const elFootBox = document.querySelector('#footBox');
 
+
+//기능 함수
+
+
+
   const fnScript = ()=>{
     const mkScript = document.createElement('script');
-    mkScript.setAttribute('src','/js/src/imoport_footer.js');
+    mkScript.setAttribute('src','/js/src/footer.js');
     elBody.append(mkScript);
   };
   
@@ -20,6 +25,16 @@
       elFootBox.innerHTML = element;
     })
     .then(()=>{
-      fnScript();
+      fnScript()
     })
-}
+
+
+
+
+
+
+  };
+
+
+
+

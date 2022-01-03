@@ -5,7 +5,7 @@
 {  
   
 //선택자 변수
-const dlBody = document.querySelector('body');
+const elBody = document.querySelector('body');
 const elHeadWrap = document.querySelector('.head_wrapper');
 
 
@@ -35,7 +35,7 @@ const fnMKScript = (data)=>{
   const mkScript = document.createElement('script');
   mkScript.setAttribute('src', data);
   mkScript.setAttribute('class', 'navScript');
-  dlBody.append(mkScript);
+  elBody.append(mkScript);
 };
 
 //여기까지는 이해감..그이후로 해석불가능,,
