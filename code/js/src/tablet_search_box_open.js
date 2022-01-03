@@ -1,7 +1,7 @@
 // tablet_search_box_open.js
 
 // ==============================================
-// search_area 버튼 클릭하면 mo_search_form_box 출력
+// search_area 버튼 클릭하면 mo_search_form_box 나오기.
 // 1. 클릭시 .mo_search_form_box 클래스 .open 추가
 // 2. 영역 바깥 클릭시 .open 제거 
 // ==============================================
