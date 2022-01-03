@@ -1,6 +1,6 @@
 //#serchPdBox 
 
-$imgPath:'../../img/';
+$imgPath:'../../img/thumbnail/';
 body{width: 100%; }
 
 #serchPdBox {
@@ -65,8 +65,8 @@ body{width: 100%; }
 
 
     & .direc_btn {
-      position: absolute; top: 80%; z-index: 100; left: 50%; margin-left: -40px;
-      width: 80px; height: 26px; background-color: #f0d;
+      position: absolute; top: 74%; z-index: 100; left: 50%; margin-left: -40px;
+      width: 80px; height: 27px; 
       & > a {@include full; border-radius: 20px; background-color: $color_primary_02;
       font-size: 12px; text-align: center; line-height: 26px; 
       color: #333333;}
@@ -77,9 +77,11 @@ body{width: 100%; }
   }//.serch_conbox
 
   @at-root .serch_thumbnail {width: 100%; height: 180px;
-    @include mobile {width: 120px;}
-   @include full('thumbnail/m_pd_3-removebg-preview.png',$size:contain){
-      }
+    @include handhelds {width: 120px;
+    @include img ('largeBox_01.jpg')
+    }
+   @include full('m_pd_3-removebg-preview.png',$size:contain)
+      
   
   }//serch_thumbnail
 

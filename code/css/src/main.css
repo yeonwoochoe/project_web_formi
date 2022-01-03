@@ -624,7 +624,7 @@ fieldset {
   display: block;
   width: 100%;
   height: 100%;
-  background-color: #444;
+  background-color: #70A103;
   border-radius: 5px;
   color: #fff;
   text-align: center;
@@ -649,9 +649,6 @@ fieldset {
   z-index: 200;
   width: 100%;
   height: 0;
-}
-.view_btn > button {
-  background-color: #999;
 }
 .view_btn > button.next {
   float: right;
@@ -717,6 +714,10 @@ fieldset {
   display: block;
   z-index: 100;
 }
+.slide_03 {
+  color: #fff;
+}
+
 .slide_title {
   width: 900px;
   height: auto;
@@ -734,21 +735,69 @@ fieldset {
   margin-bottom: 10px;
 }
 .slide_title > .sub_title {
-  font-size: 24px;
+  font-size: 22px;
   margin-bottom: 40px;
 }
 
 #viewBox .slide_01 {
-  background-color: #894;
+  background-image: url(../../img/banner/rolling_theforme_01.jpg);
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  background-size: cover;
+}
+#viewBox .slide_01 > span {
+  display: block;
+  position: absolute;
+  z-index: -1;
+  clip: rect(0 0 0 0);
+  width: 0;
+  height: 0;
+  overflow: hidden;
 }
 #viewBox .slide_02 {
-  background-color: #fd0;
+  background-image: url(../../img/banner/rolling_theforme_02.jpg);
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  background-size: cover;
+}
+#viewBox .slide_02 > span {
+  display: block;
+  position: absolute;
+  z-index: -1;
+  clip: rect(0 0 0 0);
+  width: 0;
+  height: 0;
+  overflow: hidden;
 }
 #viewBox .slide_03 {
-  background-color: #05f;
+  background-image: url(../../img/banner/rolling_theforme_03.jpg);
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  background-size: cover;
+}
+#viewBox .slide_03 > span {
+  display: block;
+  position: absolute;
+  z-index: -1;
+  clip: rect(0 0 0 0);
+  width: 0;
+  height: 0;
+  overflow: hidden;
 }
 #viewBox .slide_04 {
-  background-color: #0f0;
+  background-image: url(../../img/banner/rolling_theforme_04.jpg);
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  background-size: cover;
+}
+#viewBox .slide_04 > span {
+  display: block;
+  position: absolute;
+  z-index: -1;
+  clip: rect(0 0 0 0);
+  width: 0;
+  height: 0;
+  overflow: hidden;
 }
 
 body {
@@ -881,13 +930,12 @@ body {
 }
 .serch_conbox .direc_btn {
   position: absolute;
-  top: 80%;
+  top: 74%;
   z-index: 100;
   left: 50%;
   margin-left: -40px;
   width: 80px;
-  height: 26px;
-  background-color: #f0d;
+  height: 27px;
 }
 .serch_conbox .direc_btn > a {
   display: block;
@@ -922,9 +970,22 @@ body {
   background-position: 50% 50%;
   background-size: contain;
 }
-@media all and (max-width: 767px) {
+@media all and (max-width: 1199px) {
   .serch_thumbnail {
     width: 120px;
+    background-image: url(../../img/thumbnail/largeBox_01.jpg);
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    background-size: cover;
+  }
+  .serch_thumbnail > span {
+    display: block;
+    position: absolute;
+    z-index: -1;
+    clip: rect(0 0 0 0);
+    width: 0;
+    height: 0;
+    overflow: hidden;
   }
 }
 .serch_thumbnail > span {
@@ -1323,27 +1384,74 @@ body {
   position: relative;
   width: 100%;
   height: 100%;
-  background-color: #fdf;
 }
 .tab_content_area .tab_conbox {
   display: none;
   width: 100%;
   height: 100%;
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: -60%;
 }
 .tab_content_area .tab_conbox:nth-child(1) {
-  background-image: url(../../../img/thumbnail/largeBox_01.jpg);
+  background-image: url(../../img/banner/rolling_theforme_01.jpg);
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  background-size: cover;
+}
+.tab_content_area .tab_conbox:nth-child(1) > span {
+  display: block;
+  position: absolute;
+  z-index: -1;
+  clip: rect(0 0 0 0);
+  width: 0;
+  height: 0;
+  overflow: hidden;
+}
+@media all and (max-width: 1199px) {
+  .tab_content_area .tab_conbox:nth-child(1) {
+    background-position-x: 80%;
+  }
 }
 .tab_content_area .tab_conbox:nth-child(2) {
-  background-image: url(../../../img/thumbnail/largeBox_02.jpg);
+  background-image: url(../../img/banner/rolling_theforme_02.jpg);
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  background-size: cover;
+}
+.tab_content_area .tab_conbox:nth-child(2) > span {
+  display: block;
+  position: absolute;
+  z-index: -1;
+  clip: rect(0 0 0 0);
+  width: 0;
+  height: 0;
+  overflow: hidden;
+}
+@media all and (max-width: 1199px) {
+  .tab_content_area .tab_conbox:nth-child(2) {
+    background-position-x: 80%;
+  }
 }
 .tab_content_area .tab_conbox:nth-child(3) {
-  background-image: url(../../../img/thumbnail/largeBox_03.jpg);
+  background-image: url(../../img/banner/rolling_theforme_04.jpg);
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  background-size: cover;
+}
+.tab_content_area .tab_conbox:nth-child(3) > span {
+  display: block;
+  position: absolute;
+  z-index: -1;
+  clip: rect(0 0 0 0);
+  width: 0;
+  height: 0;
+  overflow: hidden;
+}
+@media all and (max-width: 1199px) {
+  .tab_content_area .tab_conbox:nth-child(3) {
+    background-position-x: 70%;
+  }
 }
 .tab_content_area .tab_conbox .tab_content {
-  color: #fff;
+  color: #333;
   position: absolute;
   top: 30%;
   left: 10%;

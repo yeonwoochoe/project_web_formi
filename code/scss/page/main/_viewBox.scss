@@ -34,7 +34,7 @@ $imgPath:'../../img/';
 @at-root .vmb {
  width: 200px; height: 50px;
 & > a {@include full;
-  background-color: #444; border-radius: 5px;
+  background-color: $color_primary_01; border-radius: 5px;
   color: #fff; text-align: center; text-transform: uppercase; line-height: 50px;
 & > .more {display: inline-block; margin-left: 10px;}
     }
@@ -48,7 +48,6 @@ $imgPath:'../../img/';
   position: absolute; top: 50%; margin-top: -70px;
   left: 0; z-index: 200; width: 100%; height: 0;
   & > button { 
-    background-color: #999; 
     &.next { float: right;
       @include full('slick-next.svg',$size:contain) {
         width: 80px; height: 80px;	}
@@ -77,17 +76,21 @@ $imgPath:'../../img/';
     height: 100%;
     & > div {display: none; position: absolute;
       top: 0; left: 0; width: 100%;height: 100%;
+
     &.act{  display: block;
       z-index: 100;
       }
     }
+    @at-root .slide_03 {color: $color_white;}
     @at-root .slide_title 
      {width:900px; height: auto; margin: auto; padding-top: 90px;
       @include handhelds {display: none;}
       & > dt {
         font-size: map-get($font_size,title3); font-weight: 700;
-      margin-bottom: 10px;}
-      & > .sub_title {font-size: map-get($font_size,point1);margin-bottom: 40px;}
+      margin-bottom: 10px;
+  
+}
+      & > .sub_title {font-size: map-get($font_size,content1);margin-bottom: 40px;}
     
     }
 
@@ -98,16 +101,20 @@ $imgPath:'../../img/';
 
 
   .slide_01 {
-    background-color: #894;
+    @include img('banner/rolling_theforme_01.jpg');
+    
   }
   .slide_02 {
-    background-color: #fd0;
+    @include img('banner/rolling_theforme_02.jpg');
+    
   }
   .slide_03 {
-    background-color: #05f;
+    @include img('banner/rolling_theforme_03.jpg');
+    
   }
   .slide_04 {
-    background-color: #0f0;
+    @include img('banner/rolling_theforme_04.jpg');
+    
   }
 
 }
