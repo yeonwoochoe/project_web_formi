@@ -78,6 +78,8 @@ box-sizing: content-box;
       & > li {
       float: left; width: auto; height: 100%; margin-left: 30px;
       box-sizing: border-box; color: #444; text-align: center;
+      & a { text-decoration: none;}
+      &:hover {font-weight: 700; color: $color_primary_01;}
       @include tablet {margin-right: 50px; margin-left: 0;
         &:last-child {margin-right: 0;}}
     } //li

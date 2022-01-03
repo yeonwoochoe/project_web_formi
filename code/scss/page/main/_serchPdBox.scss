@@ -67,8 +67,10 @@ body{width: 100%; }
     & .direc_btn {
       position: absolute; top: 74%; z-index: 100; left: 50%; margin-left: -40px;
       width: 80px; height: 27px; 
-      & > a {@include full; border-radius: 20px; background-color: $color_primary_02;
-      font-size: 12px; text-align: center; line-height: 26px; 
+      border-radius: 20px; background-color: $color_primary_02;
+      & > a {@include full;
+      font-size: 12px; text-align: center; line-height: 27px;
+      &:hover {@include hoverT($ms: 100)} 
       color: #333333;}
       @include pc {display: none;}
       @include laptop {display: none;}

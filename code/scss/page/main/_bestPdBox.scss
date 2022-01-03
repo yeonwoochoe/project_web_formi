@@ -52,11 +52,13 @@ $imgPath:"../../img/";
     bottom: 15px; right: 15px;
     width: 48px; height: 48px;
     background-color: #fff;
+    background-image: url('../../../img/shopping-bag.svg');
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
     border-radius: 100%; cursor: pointer;
-    &:hover {background-color: $color_primary_01;}
-    & img {transform: scale(0.7);
-      &:hover {filter: brightness(100);}
-      }
+    &:hover {background-color: $color_primary_01;
+      background-image: url('../../../img/shopping-bag_white.svg');}
+
     }
   @at-root .description {  width: 100%; height: auto;
   & .best_pd_name a {display: block;

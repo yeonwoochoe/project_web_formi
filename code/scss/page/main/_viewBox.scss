@@ -33,7 +33,7 @@ $imgPath:'../../img/';
 @at-root .vmb {
  width: 200px; height: 50px;
 & > a {@include full;
-  background-color: $color_primary_01; border-radius: 5px;
+  background-color: $color_primary_01; border-radius: 5px; 
   color: #fff; text-align: center; text-transform: uppercase; line-height: 50px;
 & > .more {display: inline-block; margin-left: 10px;}
     }

@@ -39,7 +39,9 @@ $imgPath:'../../img/';
 
           @at-root .icon_box {width: 50%; height: 50%;
              margin: auto;
-           
+            & a:hover {transform: scale(1.1); 
+              transition: all 200ms ease;
+            }
             
             &.user a { @include full('mo/mo_user.svg',$size:contain)}
             &.review a { @include full('mo/mo_review.svg',$size:contain)}

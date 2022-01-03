@@ -67,6 +67,17 @@ $imgPath:"../../img/";
   }
 }
 
+//hover
+
+@mixin hoverT($scale: 1.1, $ms: 300) {
+	&:hover {
+    font-weight: 500;
+    text-decoration: none;
+		transform: scale($scale);
+		transition: all $ms + ms ease;
+		@content;
+	}
+}
 
 
 

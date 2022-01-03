@@ -52,6 +52,7 @@ $imgPath:'../../img/';
 
     
         & a { @include full; font-size: 0.9rem; font-weight: 400;
+          &:hover {@include hoverT}
           @include handhelds {
             font-size: map-get($font_size,content3);
 
@@ -74,18 +75,20 @@ $imgPath:'../../img/';
       } 
 
       @at-root .sns_btn{
-        float: right;  width: 180px; height: 50px;
+        float: right;  width: 180px; height: 50px; 
         margin-top: 20px; 
             @include handhelds {float: left; order:-1; margin: 0;}
 
         & ul { width: auto;height: 100%;
-          & li { float: left; width: 50px; height: 50px;
+          & li { float: left; width: 50px; height: 50px; 
             margin-left: 10px;
             & a { float: left;
               width: 100%; height: 100%;
-              text-align: center; line-height: 45px;
+              text-align: center; line-height: 50px;
+              color: $color_gray_01;
+              font-size: 30px;
               border-radius: 100%;
-              background-color: #fff;}
+         }
           }//li
         } //ul
       }//.sns_btn

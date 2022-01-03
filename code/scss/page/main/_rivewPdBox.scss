@@ -51,12 +51,11 @@ $imgPath:'../../img/';
 				position: absolute; bottom: 10px; left: 50%; z-index: 100;
 				width: 100%; height: auto; padding: 5px; 
 				transform: translateX(-50%);
-				background-color: #555; 
 				& > ul {  
 					width:100%; height:30px; text-align: center; 
 					& > li {  
 						display: inline-block; width: 30px; height: 30px; 
-						margin-right: 20px; background-color: #fdf; 
+						margin-right: 20px; 
 						&:last-child {margin-right: 0;}
 						@at-root .re_indicator a {
 							@include full;
@@ -73,7 +72,7 @@ $imgPath:'../../img/';
 			left: 0; z-index: 500; width: 100%; height: 0;
 			& > button {  justify-content: space-between;
 				width: 60px; height: 60px;
-				color: #fff;background-color: #999; 
+				color: #fff;
 		
 				&.next { float: right;
 					@include full('slick-next.svg',$size:contain) {
@@ -107,8 +106,8 @@ $imgPath:'../../img/';
 			}
 		
 			.slide_01 {
-				background-color: #4b97;
-				@include full ('img-box.png',$size:cover);
+				background-color: #777;
+				@include full ('banner/sinae1000_01_02.jpeg',$size:cover);
 			}
 			.slide_02 {
 				background-color: #73f7;
@@ -119,29 +118,9 @@ $imgPath:'../../img/';
 			.slide_04 {
 				background-color: #5af7;
 			}
-	
-	
-		
-		
+
 	}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
- }
+ }//re_slide_wrapper
 
 
 
@@ -162,12 +141,11 @@ $imgPath:'../../img/';
 			margin-left: -100px;  z-index: 500;
 			width: 200px; height: 60px; color: #fff;
 			font-weight: 400; text-align: center;
-			line-height: 60px; background-color: #444;
+			line-height: 60px; background-color: $color_primary_01;
 
-			& a {	display: block; width: 100%; height: auto;
-				color: #fff; font-weight: 400;
-				text-align: center; line-height: 60px;
-				background-color: #70A103;
+			& a {	
+				@include full;
+				&:hover{@include hoverT($ms:200)}
 				&::after{	content: "";
 					display: inline-block; /*i태그는 인라인 요소이기 때문에 블록처리해야함*/
 					margin-left: 5px;
