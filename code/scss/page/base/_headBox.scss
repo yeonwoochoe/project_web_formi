@@ -23,7 +23,7 @@ box-sizing: content-box;
 .mid_navi_btnBox {
   display: flex; justify-content: space-between; align-items: center;
   width: 100%; height: 60px; padding: 10px;
-.mid_navi_btn {display: block; width: 36px; height: 36px; background-color: #fdf;
+.mid_navi_btn {display: block; width: 36px; height: 36px; 
   @include mobile{
   button {@include full ($file:'m_navigation.svg',$size:contain)}
   }
@@ -34,7 +34,7 @@ box-sizing: content-box;
 
 .mid_mo_navi_btn {display: flex;
   @at-root .unb_area {
-      display: block; width: 32px; height: 32px; margin-left: 10px; background-color: #fdf;
+      display: block; width: 32px; height: 32px; margin-left: 10px;
       @include tablet { 
       button {@include full ($file:'m_search.svg',$size:contain)}
       }
@@ -45,7 +45,6 @@ box-sizing: content-box;
 
   .shopping_area {
       display: block; width: 32px; height: 32px;  margin-left: 10px;
-      background-color: #fdf; 
       button { @include full ($file:'m_shopping-bag.svg',$size:contain)}
     }
   }//mid_mo_navi_btn

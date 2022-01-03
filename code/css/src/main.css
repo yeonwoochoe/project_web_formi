@@ -59,7 +59,6 @@
   display: block;
   width: 36px;
   height: 36px;
-  background-color: #fdf;
 }
 @media all and (max-width: 767px) {
   .mid_navi_btnBox .mid_navi_btn button {
@@ -109,7 +108,6 @@
   width: 32px;
   height: 32px;
   margin-left: 10px;
-  background-color: #fdf;
 }
 @media all and (min-width: 768px) and (max-width: 1199px) {
   .unb_area button {
@@ -157,7 +155,6 @@
   width: 32px;
   height: 32px;
   margin-left: 10px;
-  background-color: #fdf;
 }
 .mid_navi_btnBox .mid_mo_navi_btn .shopping_area button {
   display: block;
@@ -575,7 +572,6 @@ fieldset {
   height: auto;
   padding: 5px;
   transform: translateX(-50%);
-  background-color: #555;
 }
 .indi_container > ul {
   width: 100%;
@@ -643,8 +639,7 @@ fieldset {
 
 .view_btn {
   position: absolute;
-  top: 50%;
-  margin-top: -70px;
+  top: 40%;
   left: 0;
   z-index: 200;
   width: 100%;
@@ -724,9 +719,14 @@ fieldset {
   margin: auto;
   padding-top: 90px;
 }
-@media all and (max-width: 1199px) {
+@media all and (max-width: 767px) {
   .slide_title {
     display: none;
+  }
+}
+@media all and (min-width: 768px) and (max-width: 1199px) {
+  .slide_title {
+    padding-top: 130px;
   }
 }
 .slide_title > dt {
@@ -734,9 +734,21 @@ fieldset {
   font-weight: 700;
   margin-bottom: 10px;
 }
+@media all and (min-width: 768px) and (max-width: 1199px) {
+  .slide_title > dt {
+    font-size: 28px;
+    padding-left: 90px;
+  }
+}
 .slide_title > .sub_title {
   font-size: 22px;
   margin-bottom: 40px;
+}
+@media all and (min-width: 768px) and (max-width: 1199px) {
+  .slide_title > .sub_title {
+    font-size: 14px;
+    padding-left: 90px;
+  }
 }
 
 #viewBox .slide_01 {
@@ -754,6 +766,23 @@ fieldset {
   height: 0;
   overflow: hidden;
 }
+@media all and (max-width: 767px) {
+  #viewBox .slide_01 {
+    background-image: url(../../img/banner/mobile_banner_01.jpg);
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    background-size: cover;
+  }
+  #viewBox .slide_01 > span {
+    display: block;
+    position: absolute;
+    z-index: -1;
+    clip: rect(0 0 0 0);
+    width: 0;
+    height: 0;
+    overflow: hidden;
+  }
+}
 #viewBox .slide_02 {
   background-image: url(../../img/banner/rolling_theforme_02.jpg);
   background-repeat: no-repeat;
@@ -768,6 +797,23 @@ fieldset {
   width: 0;
   height: 0;
   overflow: hidden;
+}
+@media all and (max-width: 767px) {
+  #viewBox .slide_02 {
+    background-image: url(../../img/banner/mobile_banner_06.jpg);
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    background-size: cover;
+  }
+  #viewBox .slide_02 > span {
+    display: block;
+    position: absolute;
+    z-index: -1;
+    clip: rect(0 0 0 0);
+    width: 0;
+    height: 0;
+    overflow: hidden;
+  }
 }
 #viewBox .slide_03 {
   background-image: url(../../img/banner/rolling_theforme_03.jpg);
@@ -784,6 +830,23 @@ fieldset {
   height: 0;
   overflow: hidden;
 }
+@media all and (max-width: 767px) {
+  #viewBox .slide_03 {
+    background-image: url(../../img/banner/mobile_banner_05.jpg);
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    background-size: cover;
+  }
+  #viewBox .slide_03 > span {
+    display: block;
+    position: absolute;
+    z-index: -1;
+    clip: rect(0 0 0 0);
+    width: 0;
+    height: 0;
+    overflow: hidden;
+  }
+}
 #viewBox .slide_04 {
   background-image: url(../../img/banner/rolling_theforme_04.jpg);
   background-repeat: no-repeat;
@@ -798,6 +861,23 @@ fieldset {
   width: 0;
   height: 0;
   overflow: hidden;
+}
+@media all and (max-width: 767px) {
+  #viewBox .slide_04 {
+    background-image: url(../../img/banner/mobile_banner_04.jpg);
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    background-size: cover;
+  }
+  #viewBox .slide_04 > span {
+    display: block;
+    position: absolute;
+    z-index: -1;
+    clip: rect(0 0 0 0);
+    width: 0;
+    height: 0;
+    overflow: hidden;
+  }
 }
 
 body {
