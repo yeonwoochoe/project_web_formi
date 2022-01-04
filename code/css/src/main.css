@@ -1055,13 +1055,66 @@ body {
 .serch_thumbnail {
   width: 100%;
   height: 180px;
+}
+.serch_thumbnail.pd_01 {
+  background-image: url(../../img/thumbnail/m_pd_1-removebg-preview.png);
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  background-size: contain;
+}
+.serch_thumbnail.pd_01 > span {
   display: block;
-  width: 100%;
-  height: 100%;
+  position: absolute;
+  z-index: -1;
+  clip: rect(0 0 0 0);
+  width: 0;
+  height: 0;
+  overflow: hidden;
+}
+.serch_thumbnail.pd_02 {
+  background-image: url(../../img/thumbnail/m_pd_2-removebg-preview.png);
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  background-size: contain;
+}
+.serch_thumbnail.pd_02 > span {
+  display: block;
+  position: absolute;
+  z-index: -1;
+  clip: rect(0 0 0 0);
+  width: 0;
+  height: 0;
+  overflow: hidden;
+}
+.serch_thumbnail.pd_03 {
   background-image: url(../../img/thumbnail/m_pd_3-removebg-preview.png);
   background-repeat: no-repeat;
   background-position: 50% 50%;
   background-size: contain;
+}
+.serch_thumbnail.pd_03 > span {
+  display: block;
+  position: absolute;
+  z-index: -1;
+  clip: rect(0 0 0 0);
+  width: 0;
+  height: 0;
+  overflow: hidden;
+}
+.serch_thumbnail.pd_04 {
+  background-image: url(../../img/thumbnail/m_pd_4-removebg-preview.png);
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  background-size: contain;
+}
+.serch_thumbnail.pd_04 > span {
+  display: block;
+  position: absolute;
+  z-index: -1;
+  clip: rect(0 0 0 0);
+  width: 0;
+  height: 0;
+  overflow: hidden;
 }
 @media all and (max-width: 1199px) {
   .serch_thumbnail {
@@ -1080,15 +1133,6 @@ body {
     height: 0;
     overflow: hidden;
   }
-}
-.serch_thumbnail > span {
-  display: block;
-  position: absolute;
-  z-index: -1;
-  clip: rect(0 0 0 0);
-  width: 0;
-  height: 0;
-  overflow: hidden;
 }
 
 .serch_description {
