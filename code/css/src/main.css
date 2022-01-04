@@ -1450,10 +1450,12 @@ body {
     width: 100%;
     height: 34px;
     margin-bottom: 20px;
+    background-color: #70A103;
     border-radius: 20px;
   }
   .tab_title_area li.action {
     border: none;
+    background-color: #505050;
   }
   .tab_title_area li button {
     display: block;
@@ -1463,7 +1465,6 @@ body {
     font-weight: 400;
     color: #fff;
     border-radius: 20px;
-    background-color: #70A103;
     text-align: left;
     text-indent: 24px;
   }
