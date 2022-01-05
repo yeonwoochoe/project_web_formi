@@ -20,6 +20,7 @@ const elSearchBox = elMoNavContainer.querySelector('.mo_search_form_box');
 const elViewBox = document.querySelector('#viewBox');
 const elLoginBox = document.querySelector('#loginBox');
 const elSearchFormBox = document.querySelector('#searchFormBox');
+const elNavLogin =  document.querySelector('.mid_navi_btn > button');
 
 
 //기본 추가 기능
@@ -88,6 +89,14 @@ fnCkWidth();
 // resize 되면 실행
 window.addEventListener('resize', () => {
   fnCkWidth();
+});
+
+
+// elNavLogin 클릭하면 로그인 페이지로 이동----------------------
+elNavLogin.addEventListener('click', function(e){
+  e.preventDefault();
+  let url = "./sub_login.html";
+  window.location = url;
 });
 
 

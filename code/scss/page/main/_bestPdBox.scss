@@ -28,7 +28,7 @@ $imgPath:"../../img/";
 
 @at-root .bset_pd_wrap { 
     display: flex; justify-content: space-evenly;
-    width:  100%; height: auto; 
+    width:  100%; height: auto;  max-width: 1440px; margin: auto;
     @include mobile { flex-direction: column;}
     @include tablet{ flex-direction: row; flex-wrap: wrap;
         width: 70%; margin: auto; min-width: 768px;

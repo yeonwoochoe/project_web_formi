@@ -1189,6 +1189,8 @@ body {
   justify-content: space-evenly;
   width: 100%;
   height: auto;
+  max-width: 1440px;
+  margin: auto;
 }
 @media all and (max-width: 767px) {
   .bset_pd_wrap {
@@ -1663,6 +1665,7 @@ body {
   display: flex;
   justify-content: space-evenly;
   width: 100%;
+  max-width: 1440px;
   height: auto;
   margin: auto;
   padding-bottom: 40px;

@@ -17,6 +17,7 @@ const elMidNaviBtn = elMidNaviBtnBox.querySelector('.mid_navi_btn > button');
 const elMoNavOpenBtn = document.querySelector('.nav_container');
 const elMoNavInner = document.querySelector('.mo_btn_wrap');
 const elNavClose = elMoNavInner.querySelector('.nav_close');
+const elNavLogin =  document.querySelector('.unb_area > button');
 
 // 이벤트 활성화 클래스
 const ckBtnOn = 'on';
@@ -36,5 +37,15 @@ elNavClose.addEventListener('click', function(e){
   e.preventDefault();
   elMoNavOpenBtn.classList.remove(ckBtnOn);
 });
+
+
+
+// elNavLogin 클릭하면 로그인 페이지로 이동----------------------
+elNavLogin.addEventListener('click', function(e){
+  e.preventDefault();
+  let url = "./sub_login.html";
+  window.location = url;
+});
+
 
 }

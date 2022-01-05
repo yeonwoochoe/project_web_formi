@@ -15,6 +15,7 @@ const elMoNavOpenBtn = document.querySelector('.mo_nav_container');
 const elMoNavInner = document.querySelector('.mo_btn_wrap');
 const elNavClose = elMoNavInner.querySelector('.nav_close');
 
+
 // 이벤트 활성화 클래스
 const ckBtnOn = 'on';
 
@@ -33,4 +34,6 @@ elNavClose.addEventListener('click', function(e){
   e.preventDefault();
   elMoNavOpenBtn.classList.remove(ckBtnOn);
 });
+
+
 
