@@ -4,7 +4,7 @@ $imgPath:'../../img/';
 
 #rivewPdBox{
     width: 100%; height: 800px;
-    background-color: rgba($color_primary_02,0.1);
+    // background-color: rgba($color_primary_02,0.1);
     padding-top:  80px;
 
 		@include tablet { height: auto; }
@@ -129,7 +129,7 @@ $imgPath:'../../img/';
 		width: 300px; height: 400px;
 		background-repeat: no-repeat; background-position: 50%;
 		background-size: cover;
-		background-image: url("https://picsum.photos/200/300");
+		background-image: url("../../../img/banner/sinae1000_01_02.jpeg");
 		&:last-child {margin-right: 0;}
 		
 		@include tablet {margin-bottom: 30px;}

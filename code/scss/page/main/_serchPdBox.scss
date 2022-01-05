@@ -5,7 +5,7 @@ body{width: 100%; }
 
 #serchPdBox {
     width: 100%; height: auto;
-    background-color: nth($color_accent_01,1 ); 
+    // background-color: nth($color_accent_01,1 ); 
     @include handhelds { overflow-x: hidden;}
    
 
@@ -13,7 +13,7 @@ body{width: 100%; }
     position: relative; top: -100px; z-index: 100;
     width: 1074px; height: 450px; padding: 30px 90px;
     margin: auto; background-color: #fff;
-    box-shadow: 5px 5px 20px rgba(94, 94, 94, 0.15);
+    box-shadow: 10.5px 3.5px 19px -2px rgba(0, 0, 0,0.4);
     @include handhelds {position: static;
     width: 100%; height: 360px; padding:50px 0px;  margin: 0;
   background-color: #fff;}
