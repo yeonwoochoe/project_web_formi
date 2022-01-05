@@ -9,28 +9,10 @@
   const elFootBox = document.querySelector('#footBox');
 
 
-//기능 함수
-
-
-
-  const fnScript = ()=>{
-    const mkScript = document.createElement('script');
-    mkScript.setAttribute('src','/js/src/footer.js');
-    elBody.append(mkScript);
-  };
   
   fetch(path+footerData)
     .then( response => response.text() )
-    .then( (element) =>{
-      elFootBox.innerHTML = element;
-    })
-    .then(()=>{
-      fnScript()
-    })
-
-
-
-
+    .then( (element) =>{elFootBox.innerHTML = element;})
 
 
   };
