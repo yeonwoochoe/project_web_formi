@@ -5,7 +5,7 @@
   const path = './temp/';
   const footerData = 'footer_area.html';
 
-  const elBody = document.querySelector('body');
+
   const elFootBox = document.querySelector('#footBox');
 
 
@@ -13,8 +13,6 @@
   fetch(path+footerData)
     .then( response => response.text() )
     .then( (element) =>{elFootBox.innerHTML = element;})
-
-
   };
 
 

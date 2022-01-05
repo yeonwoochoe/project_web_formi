@@ -21,7 +21,6 @@ const elViewBox = document.querySelector('#viewBox');
 const elLoginBox = document.querySelector('#loginBox');
 const elSearchFormBox = document.querySelector('#searchFormBox');
 
-console.log(elLoginBox);
 
 //기본 추가 기능
 const opActive = 'open';
