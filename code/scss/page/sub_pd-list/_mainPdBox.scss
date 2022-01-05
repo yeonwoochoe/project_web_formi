@@ -7,18 +7,11 @@ $imgPath:'../../img/';
 
 #mainPdBox {
   width: 100%; height: auto;
-   background-color: #333;
-
-// @at-root .main_pd_container {
-//   width: 100%; 
-//   display: flex; justify-content: space-evenly;
-// }
 
 
 @at-root .main_pd_wrap {
   display: flex; justify-content: space-between;
   flex-wrap: wrap; width: 100%; height: auto; margin-top: 120px;
-  background-color: #333;
   @include pc {flex-wrap: wrap; width: 80%; margin: auto;
     max-width: 1190px; margin-top: 120px; justify-content: space-around;}
   @include laptop {justify-content: space-evenly;  max-width: 1190px; margin: auto; margin-top: 120px;}
@@ -46,18 +39,20 @@ $imgPath:'../../img/';
    @include mobile {width:100%;  margin: auto; display: flex;
   justify-content: center;}
   & > ul {  width: 100%; height: 100%; box-sizing: border-box;
+    box-shadow: 1.5px 1.5px 7px 0 rgb(182, 182, 182);
+    border-radius: 5px;
     @include mobile {width: auto;}
     @at-root .tab_title_area li { float: left;
       width: 200px; height: 100%;
       box-sizing: border-box; padding: 0;
-      background-color: #fff; text-align: center;
+       text-align: center;
       line-height: 60px;
       @include mobile {width: 100px;}
 
-      &.action {background-color:  #70A103;
+      &.action {background-color: $color_primary_01;
         & button {color: $color_white;}
       }
-      &:hover{background-color: #70A103;
+      &:hover{background-color: $color_primary_01;
         & button {color: $color_white; 
         @include hoverT($ms:200) }
       }
@@ -90,6 +85,7 @@ $imgPath:'../../img/';
     @at-root .main_conbox {
       width: 300px;  height: 440px; padding: 10px;
       margin-bottom: 100px;
+      border: 1px solid #e9e9e9;
       background-color: #fff;
         @include mobile {width: 280px;}
 
@@ -99,7 +95,8 @@ $imgPath:'../../img/';
 
       & .thumbnail { position: relative;
         float: left;  width: 100%; height: 280px;
-        background-color: #444;
+        border: 1px solid #f3f3f3e4;
+
         & img { float: left; width: 100%;height: 100%;}
       & .shop_bag_icon {
         position: absolute;
