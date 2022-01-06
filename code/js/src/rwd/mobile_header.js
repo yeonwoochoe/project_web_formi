@@ -40,11 +40,12 @@ elNavClose.addEventListener('click', function(e){
 
 
 
+
 // elNavLogin 클릭하면 로그인 페이지로 이동----------------------
 elNavLogin.addEventListener('click', function(e){
   e.preventDefault();
   let url = "./sub_login.html";
-  window.location = url;
+  location.href= url;
 });
 
 

@@ -96,7 +96,7 @@ window.addEventListener('resize', () => {
 elNavLogin.addEventListener('click', function(e){
   e.preventDefault();
   let url = "./sub_login.html";
-  window.location = url;
+  location.href= url;
 });
 
 
