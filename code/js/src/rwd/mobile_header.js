@@ -18,6 +18,7 @@ const elMoNavOpenBtn = document.querySelector('.nav_container');
 const elMoNavInner = document.querySelector('.mo_btn_wrap');
 const elNavClose = elMoNavInner.querySelector('.nav_close');
 const elNavLogin =  document.querySelector('.unb_area > button');
+const elNavlogo =  elMoNavInner.querySelector('.nav_logo > a');
 
 // 이벤트 활성화 클래스
 const ckBtnOn = 'on';
@@ -29,9 +30,9 @@ const ckBtnOn = 'on';
 elMidNaviBtn.addEventListener('click', function(e) {
   e.preventDefault();
   elMoNavOpenBtn.classList.add(ckBtnOn);
- 
+  elNavlogo.focus();
 });
-
+    
 // elNavClose 클릭하면 네비 버튼 닫기----------------------
 elNavClose.addEventListener('click', function(e){
   e.preventDefault();
