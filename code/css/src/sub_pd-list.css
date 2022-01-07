@@ -725,6 +725,9 @@ fieldset {
   .main_conbox:last-child {
     display: none;
   }
+  .main_conbox:nth-last-child(2) {
+    display: none;
+  }
 }
 .main_conbox .thumbnail {
   position: relative;

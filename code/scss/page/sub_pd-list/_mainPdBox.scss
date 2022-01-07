@@ -89,7 +89,11 @@ $imgPath:'../../img/';
       background-color: #fff;
         @include mobile {width: 280px;}
 
-      @include tablet{&:last-child {display: none;}}
+      @include tablet{
+        &:last-child {display: none;}
+        &:nth-last-child(2) {display: none;}
+    
+    }
       // @include pc{&:last-child {display: none;}}
 
 
