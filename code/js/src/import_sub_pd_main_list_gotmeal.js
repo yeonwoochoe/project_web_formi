@@ -1,7 +1,7 @@
 // //import_sub_pd_main_list.js
 // // 서브페이지 메인상품리스트 영역 분리하여 불러오기 
 
-const MainlistPath = "../data/pd_formi_list.json";
+const MainlistPath = "../data/sub_pd-list_gotmeal.json";
 fetch(MainlistPath)
   .then((response)=> response.json() )
   .then((response)=>{
