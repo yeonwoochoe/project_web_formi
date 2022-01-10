@@ -107,7 +107,7 @@ $pc:1440px;
 }
 
 @mixin desk(){
-  @media all and (max-width: #{$laptop - 1}) {
+  @media all and (min-width: #{$laptop - 1}) {
     @content;
   }
 }
